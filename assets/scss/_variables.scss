@@ -1,0 +1,11 @@
+$font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'ヒラギノ明朝 Pro', 'HGP明朝B', serif;
+$breakpoints: (
+  "sm" : "screen and (min-width: 576px)",
+  "md" : "screen and (min-width: 768px)",
+  "lg" : "screen and (min-width: 992px)",
+  "xl" : "screen and (min-width: 1200px)",
+) !default;
+
+$color-type: #fff;
+$color-bg: #1c1c1c;
+

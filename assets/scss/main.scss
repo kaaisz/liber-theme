@@ -1,4 +1,33 @@
+@import "variables";
+@import "mixins";
+
 body {
-  background: #1c1c1c;
-  color: white;
+  font-family: $font-family;
+  background: $color-bg;
+  color: $color-type;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  text-combine-upright: digits 2;
+  color: $color-type;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover {
+    background: $color-type;
+    color: $color-bg;
+    transition: all .3s ease;
+  }
 }
