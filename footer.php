@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="footer site-footer">
 		<div class="site-info">
 			<p class="footer__copyright">&copy; Timelag.ltd All rights reserved.</p>
 		</div><!-- .site-info -->

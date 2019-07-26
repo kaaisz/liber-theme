@@ -93,3 +93,9 @@ a {
   min-width: 100%;
   padding: 64px;
 }
+
+.footer {
+  &__copyright {
+    padding: 64px 0;
+  }
+}
