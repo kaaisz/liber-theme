@@ -23,9 +23,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'liber-theme' ); ?></a>
+	<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'liber-theme' ); ?></a> -->
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="header site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -44,8 +44,7 @@
 				<p class="site-description"><?php echo $liber_theme_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="nav main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'liber-theme' ); ?></button>
 			<?php
 			wp_nav_menu( array(
