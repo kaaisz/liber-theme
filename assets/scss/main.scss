@@ -36,6 +36,7 @@ a {
 }
 
 .site {
+  height: 100vh;
   writing-mode: vertical-rl;
   font-family: $font-family;
   background: $color-bg;
@@ -186,5 +187,52 @@ section {
 .footer {
   &__copyright {
     padding: 64px 0;
+  }
+}
+
+.entry-header {
+  position: relative;
+}
+
+.article-page {
+  display: flex;
+  flex-direction: column;
+  
+
+  &__img {
+    width: calc(100vw - 64px);
+    height: 100vh;
+    object-fit: cover;
+
+    // @include mq(lg) {
+    //   width: calc(50vw - 90px);
+    //   // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
+    //   height: calc(100vh - 15px);
+    // }
+  }
+
+  &__title {
+    position: absolute;
+    right: 0;
+    margin-top: 90px;
+    margin-right: calc(100vw / 4.5);
+
+    // @include mq(lg) {
+    //   margin-top: 64px;
+    //   margin-right: calc(100vw / 5.5);
+    // }
+
+    &_main,
+    &_subs {
+      margin: 0 8px;
+    }
+
+    &_main {
+      font-size: 28px;
+    }
+
+    &_subs {
+      font-size: 18px;
+    }
   }
 }
