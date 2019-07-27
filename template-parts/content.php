@@ -44,6 +44,15 @@
 		// 	'after'  => '</div>',
 		// ) );
 		?>
+		<div class="share">
+			<h3>シェア</h3>
+			<div class="share__container">
+				<div class="share__button">Twitter</div>
+				<div class="share__button">Note</div>
+				<div class="share__button">Facebook</div>
+				<div class="share__button">Line</div>
+			</div>
+		</div>
 	</section><!-- .entry-content -->
 
 	<footer class="entry-footer">
