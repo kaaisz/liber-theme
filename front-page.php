@@ -36,8 +36,8 @@
             <a href=<?php the_permalink();?>>
               <?php the_post_thumbnail('large', array('class' => 'article__img'));?>
               <div class="article__title ptrn-a">
-                <h3 class="article__title_main"><?php the_title()?></h3>
-                <h4 class="article__title_subs">社会との新しいつながりを考える</h3>
+                <h3 class="article__title_main"><?php the_title();?></h3>
+                <h4 class="article__title_subs"><?php the_field('article_sub_title');?></h3>
               </div>
             </a>
           </div>

@@ -237,6 +237,8 @@ section {
 }
 
 .share {
+  margin: 0 5rem 0 0;
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -244,9 +246,28 @@ section {
   }
 
   &__button {
-    border: 1px solid $color-type;
-    padding: 0.85rem;
+    display: flex;
+    align-items: center;
+    width: 4rem;
     height: calc(100% - 5rem);
     margin: 0 0 20px 0;
+    padding: 0;
+    border: 1px solid $color-type;
+    transition: all .3s ease;
+
+    svg {
+      fill: $color-type;
+      width: 60%;
+    }
+
+    &:hover {
+      background: $color-type;
+      color: $color-bg;
+      transition: all .3s ease;
+
+      svg {
+        fill: $color-bg;
+      }
+    }
   }
 }

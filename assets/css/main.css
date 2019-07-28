@@ -12,7 +12,10 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl; }
 
 h1,
 h2,
@@ -31,9 +34,6 @@ a {
 
 .site {
   height: 100vh;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
   font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
   background: #313131;
   color: #fff; }
@@ -181,20 +181,45 @@ section {
     .article-page__title_subs {
       font-size: 18px; }
 
-.share__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+.share {
+  margin: 0 5rem 0 0; }
+  .share__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .share__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 4rem;
+    height: calc(100% - 5rem);
+    margin: 0 0 20px 0;
+    padding: 0;
+    border: 1px solid #fff;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    .share__button svg {
+      fill: #fff;
+      width: 60%; }
+    .share__button:hover {
+      background: #fff;
+      color: #313131;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+      .share__button:hover svg {
+        fill: #313131; }
 
-.share__button {
-  border: 1px solid #fff;
-  padding: 0.85rem;
-  height: calc(100% - 5rem);
-  margin: 0 0 20px 0; }
+#wpadminbar {
+  -webkit-writing-mode: horizontal-tb;
+  -ms-writing-mode: lr-tb;
+  writing-mode: horizontal-tb; }
