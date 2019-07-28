@@ -15,6 +15,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  writing-mode: vertical-rl;
 }
 
 h1,
@@ -37,7 +38,7 @@ a {
 
 .site {
   height: 100vh;
-  writing-mode: vertical-rl;
+  // writing-mode: vertical-rl;
   font-family: $font-family;
   background: $color-bg;
   color: $color-type;
@@ -270,4 +271,8 @@ section {
       }
     }
   }
+}
+
+#wpadminbar {
+  writing-mode: horizontal-tb;
 }
