@@ -16,6 +16,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   writing-mode: vertical-rl;
+  // @include writing-mode(rl);
+  // @include font-feature-settings('palt');
 }
 
 h1,
@@ -38,12 +40,9 @@ a {
 
 .site {
   height: 100vh;
-  // writing-mode: vertical-rl;
   font-family: $font-family;
   background: $color-bg;
   color: $color-type;
-  // @include writing-mode(rl);
-  // @include font-feature-settings('palt');
 }
 
 .header {
