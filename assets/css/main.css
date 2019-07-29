@@ -84,6 +84,17 @@ a {
   height: 45rem;
   font-size: 24px;
   list-style-type: none; }
+  .nav__menus_footer {
+    height: 100%;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .nav__menus_footer li {
+      margin: 0 0 1rem; }
 
 .site-content {
   min-width: 100%; }

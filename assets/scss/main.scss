@@ -91,6 +91,17 @@ a {
     height: 45rem;
     font-size: 24px;
     list-style-type: none;
+
+    &_footer {
+      height: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin: 0 0 1rem;
+      }
+    }
   }
 }
 
