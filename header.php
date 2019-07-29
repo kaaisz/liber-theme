@@ -37,6 +37,12 @@
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
+							'menu_class'        => 'nav__menus',
+						) );
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'secondary-menu',
+							'menu_class'        => 'nav__menus_footer',
 						) );
 					?>
 				</nav><!-- #site-navigation -->
@@ -49,6 +55,11 @@
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
 							'menu_class'        => 'nav__menus',
+						) );
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'secondary-menu',
+							'menu_class'        => 'nav__menus_footer',
 						) );
 					?>
 				</nav><!-- #site-navigation -->
