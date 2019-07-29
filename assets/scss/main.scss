@@ -9,13 +9,14 @@ html {
 }
 
 body {
-  width: 100%;
+  min-width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   writing-mode: vertical-rl;
+  background: $color-bg;
   // @include writing-mode(rl);
   // @include font-feature-settings('palt');
 }
@@ -39,6 +40,10 @@ a {
 }
 
 .site {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100vw;
   height: 100vh;
   font-family: $font-family;
   background: $color-bg;
