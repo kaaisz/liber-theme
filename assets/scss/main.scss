@@ -86,6 +86,12 @@ a {
       bottom: 0;
     }
   }
+
+  &__menus {
+    height: 45rem;
+    font-size: 24px;
+    list-style-type: none;
+  }
 }
 
 .site-content {
