@@ -12,15 +12,16 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-page'); ?>>
 	<header class="entry-header">
 	<?php the_post_thumbnail('large', array('class' => 'article-page__img')); ?>
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title article-page__title">', '</h1>' );
-		?>
-			<div class="article-page__title_subs"><?php the_field('article_sub_title'); ?></div>
-		<?php else : 
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		?>
-			<div class="article-page__title_subs"><?php the_field('article_sub_title'); ?></div>
+		<?php	if ( is_singular() ) :?>
+			<div class="article-page__title">
+				<h1 class="article-page__title_main"><?php the_title();?></h1>
+				<p class="article-page__title_subs"><?php the_field('article_sub_title'); ?></p>
+			</div>
+		<?php else : ?>
+			<div class="article-page__title">
+				<h2 class="entry-title article-page__title"><a href="<?php get_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
+				<div class="article-page__title_subs"><?php the_field('article_sub_title'); ?></div>
+			</div>
 		<?php 
 		endif;
 
