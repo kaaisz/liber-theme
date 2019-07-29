@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="footer site-footer">
 		<div class="site-info">
-			<p class="footer__copyright">&copy; Timelag.ltd All rights reserved.</p>
+			<p class="footer__copyright"><?php echo date(Y);?> &copy; Timelag.ltd All rights reserved.</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

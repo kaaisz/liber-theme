@@ -164,7 +164,8 @@ section {
       font-size: 14px; }
 
 .footer__copyright {
-  padding: 64px 0; }
+  padding: 64px 0;
+  text-align: right; }
 
 .entry-header {
   position: relative; }
