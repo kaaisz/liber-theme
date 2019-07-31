@@ -48,6 +48,15 @@ a {
   font-family: $font-family;
   background: $color-bg;
   color: $color-type;
+
+  &-title {
+    font-size: 28px;
+    margin: 0 16px;
+  }
+
+  &-content {
+    min-width: 100%;
+  }
 }
 
 .header {
@@ -86,27 +95,25 @@ a {
       bottom: 0;
     }
   }
-
+  
   &__menus {
-    height: 45rem;
-    font-size: 24px;
+    height: 36rem;
+    font-size: 22px;
     list-style-type: none;
 
     &_footer {
       height: 100%;
-      list-style: none;
       display: flex;
       justify-content: flex-end;
+      padding: 40px 0 0;
+      font-size: 14px;
+      list-style: none;
 
       li {
         margin: 0 0 1rem;
       }
     }
   }
-}
-
-.site-content {
-  min-width: 100%;
 }
 
 section {

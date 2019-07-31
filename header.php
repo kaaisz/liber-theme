@@ -31,25 +31,8 @@
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
 			?>
-				<nav id="site-navigation" class="nav main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'liber-theme' ); ?></button>
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'menu_class'        => 'nav__menus',
-						) );
-						wp_nav_menu( array(
-							'theme_location' => 'menu-2',
-							'menu_id'        => 'secondary-menu',
-							'menu_class'        => 'nav__menus_footer',
-						) );
-					?>
-				</nav><!-- #site-navigation -->
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
 				<nav id="site-navigation" class="nav main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'liber-theme' ); ?></button>
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
@@ -63,7 +46,22 @@
 						) );
 					?>
 				</nav><!-- #site-navigation -->
+			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<nav id="site-navigation" class="nav main-navigation">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class'        => 'nav__menus',
+						) );
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'secondary-menu',
+							'menu_class'        => 'nav__menus_footer',
+						) );
+					?>
+				</nav><!-- #site-navigation -->
 			<?php	endif; ?>
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
