@@ -1,4 +1,9 @@
-$font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'ヒラギノ明朝 Pro', 'HGP明朝B', serif;
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff");
+}
+
+$font-family: 'Yu Mincho', '游明朝', 'YuMincho', 'Hiragino Mincho ProN', 'ヒラギノ明朝 Pro', 'HGP明朝B', serif;
 $breakpoints: (
   "sm" : "screen and (min-width: 576px)",
   "md" : "screen and (min-width: 768px)",
