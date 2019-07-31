@@ -51,7 +51,8 @@ a {
   color: #fff; }
   .site-title {
     font-size: 28px;
-    margin: 0 16px; }
+    margin: 0 16px;
+    font-weight: 600; }
   .site-content {
     min-width: 100%; }
 
