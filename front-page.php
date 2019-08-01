@@ -4,8 +4,8 @@
   <main id="main" class="site-main">
     <section class="intro" id="intro">
       <div class="content">
-        <p class="intro__title">好奇心の扉を開く</p>
-        <p class="intro__content">好奇心の部屋へようこそ。<br/>未知未開の知識であなたの五感を刺激し、あなたの新しい可能性の扉を開きましょう。</p>
+        <p class="intro__title"><?php the_field('top_title', 55);?></p>
+        <p class="intro__content"><?php the_field('top_description', 55);?></p>
       </div>
     </section>
     <section class="main" id="main">
