@@ -1,0 +1,9 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  &__copyright {
+    padding: 64px 0;
+    text-align: right;
+  }
+}

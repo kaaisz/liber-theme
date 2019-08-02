@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "header";
 * {
   box-sizing: border-box;
 }
@@ -57,63 +58,6 @@ a {
 
   &-content {
     min-width: 100%;
-  }
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  width: auto;
-  background: $color-bg-header;
-  color: $color-type;
-  padding: 2rem 0;
-}
-
-
-.nav {
-  &__toggle {
-    position: relative;
-    width: 30px;
-    height: 23px;
-    margin: 0 0 2rem 0;
-  }
-
-  &__bar {
-    position: absolute;
-    height: 2px;
-    width: 25px;
-    background: $color-type;
-
-    &:nth-of-type(1) {
-      top: 0;
-    }
-
-    &:nth-of-type(2) {
-      top: 10px;
-    }
-
-    &:nth-of-type(3) {
-      bottom: 0;
-    }
-  }
-  
-  &__menus {
-    height: 36rem;
-    font-size: 22px;
-    list-style-type: none;
-
-    &_footer {
-      height: 100%;
-      display: flex;
-      justify-content: flex-end;
-      padding: 40px 0 0;
-      font-size: 14px;
-      list-style: none;
-
-      li {
-        margin: 0 0 1rem;
-      }
-    }
   }
 }
 
@@ -211,13 +155,6 @@ section {
       margin: 0 4px;
       font-size: 14px;
     }
-  }
-}
-
-.footer {
-  &__copyright {
-    padding: 64px 0;
-    text-align: right;
   }
 }
 
