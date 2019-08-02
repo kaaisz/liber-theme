@@ -141,9 +141,9 @@ section {
   align-items: center;
   width: calc(100vw - 64px);
 
-  // @include mq(lg) {
-  //   width: calc(100vw - 90px);
-  // }
+  @include lg {
+    width: calc(100vw - 90px);
+  }
 
   &__text {
     color: #fff;
@@ -235,11 +235,11 @@ section {
     height: 100vh;
     object-fit: cover;
 
-    // @include mq(lg) {
-    //   width: calc(50vw - 90px);
-    //   // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
-    //   height: calc(100vh - 15px);
-    // }
+    @include lg {
+      width: calc(50vw - 90px);
+      // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
+      height: calc(100vh - 15px);
+    }
   }
 
   &__title {
@@ -247,10 +247,10 @@ section {
     right: 0;
     margin: 90px calc(100vw / 4.5) 90px 90px;
 
-    // @include mq(lg) {
-    //   margin-top: 64px;
-    //   margin-right: calc(100vw / 5.5);
-    // }
+    @include lg {
+      margin-top: 64px;
+      margin-right: calc(100vw / 5.5);
+    }
 
     &_main,
     &_subs {
