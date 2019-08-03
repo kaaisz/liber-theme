@@ -81,7 +81,7 @@
   src: url("../woff/yumin.woff") format("woff"); }
 
 .copyright {
-  padding: 2rem 0;
+  margin: 3rem 0;
   text-align: right; }
 
 * {
@@ -108,7 +108,10 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+span,
+ul,
+li {
   text-combine-upright: digits 2;
   color: #fff; }
 
@@ -279,11 +282,11 @@ a {
       font-size: 18px; }
 
 .entry-header {
-  position: relative;
-  margin-left: 6rem; }
+  position: relative; }
 
 .entry-content {
-  height: 380px; }
+  height: 380px;
+  margin: 0 6rem; }
   .entry-content h2 {
     margin: 0 6rem 0 2rem; }
   .entry-content h3 {
@@ -343,3 +346,7 @@ a {
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: lr-tb;
   writing-mode: horizontal-tb; }
+
+.not-found {
+  height: 380px;
+  margin: 0 6rem; }

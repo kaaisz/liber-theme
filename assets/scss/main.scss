@@ -28,7 +28,10 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+span,
+ul,
+li {
   text-combine-upright: digits 2;
   color: $color-type;
 }
@@ -225,11 +228,11 @@ a {
 .entry {
   &-header {
     position: relative;
-    margin-left: 6rem;
   }
 
   &-content {
     height: 380px;
+    margin: 0 6rem;
 
     h2 {
       margin: 0 6rem 0 2rem;
@@ -298,4 +301,9 @@ a {
 
 #wpadminbar {
   writing-mode: horizontal-tb;
+}
+
+.not-found {
+  height: 380px;
+  margin: 0 6rem;
 }
