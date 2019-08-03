@@ -15,12 +15,13 @@
 
 	<footer id="colophon" class="footer site-footer">
 		<div class="site-info">
-			<p class="footer__copyright"><?php echo date(Y);?> &copy; Timelag.ltd All rights reserved.</p>
+			<p class="copyright"><?php echo date(Y);?> &copy; Timelag.ltd All rights reserved.</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/main.js"></script>
 
 </body>
 </html>

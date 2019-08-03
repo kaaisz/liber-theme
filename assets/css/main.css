@@ -23,30 +23,13 @@
   -ms-flex-align: center;
   align-items: center;
   width: auto;
+  max-height: 100vh;
   background: #1c1c1c;
   color: #fff;
   padding: 2rem 0; }
 
-.nav__toggle {
-  position: relative;
-  width: 30px;
-  height: 23px;
-  margin: 0 0 2rem 0; }
-
-.nav__bar {
-  position: absolute;
-  height: 2px;
-  width: 25px;
-  background: #fff; }
-  .nav__bar:nth-of-type(1) {
-    top: 0; }
-  .nav__bar:nth-of-type(2) {
-    top: 10px; }
-  .nav__bar:nth-of-type(3) {
-    bottom: 0; }
-
 .nav__menus {
-  height: 36rem;
+  height: 100%;
   font-size: 22px;
   list-style-type: none; }
   .nav__menus_footer {
@@ -63,16 +46,26 @@
     .nav__menus_footer li {
       margin: 0 0 1rem; }
 
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff"); }
+
+.copyright {
+  padding: 2rem 0;
+  text-align: right; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-html {
-  overflow: auto; }
-
 body {
-  min-width: 100%;
-  height: auto;
+  font-family: "Yu Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
+  width: 100%;
+  max-height: 100vh;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -108,62 +101,34 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-width: 100vw;
-  height: 100vh;
-  font-family: "Yu Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
-  background: #313131;
-  color: #fff; }
+  height: 100vh; }
+  .site-branding {
+    height: 100%; }
   .site-title {
     font-size: 28px;
     margin: 0 16px;
     font-weight: 600; }
   .site-content {
-    min-width: 100%; }
-
-section {
-  display: block;
-  min-width: 100%;
-  padding: 64px; }
+    min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .content,
 .content.shelf {
   max-height: 30em; }
-
-.content.shelf {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: calc(100vw - 64px); }
-  @media (min-width: screen-lg-min) {
-    .intro {
-      width: calc(100vw - 90px); } }
-  .intro__text {
-    color: #fff; }
-  .intro__title {
-    font-size: 13px; }
-  .intro__content {
-    font-size: 18px; }
 
 .article {
   position: relative;
   width: 16rem;
   height: 22rem;
   margin: 2rem; }
+  @media (min-width: screen-lg-min) {
+    .article {
+      height: 20rem; } }
   .article__img {
     width: 100%;
     height: 100%;
@@ -203,9 +168,6 @@ section {
       margin: 0 4px;
       font-size: 14px; }
 
-.entry-header {
-  position: relative; }
-
 .article-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,16 +175,18 @@ section {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .article-page__img {
-    width: calc(100vw - 64px);
-    height: 100vh;
+    width: 70vw;
+    max-height: 100%;
     -o-object-fit: cover;
     object-fit: cover; }
     @media (min-width: screen-lg-min) {
       .article-page__img {
-        width: calc(50vw - 90px);
-        height: calc(100vh - 15px); } }
+        width: 50vw; } }
   .article-page__title {
     position: absolute;
     right: 0;
@@ -230,13 +194,22 @@ section {
     @media (min-width: screen-lg-min) {
       .article-page__title {
         margin-top: 64px;
-        margin-right: calc(100vw / 5.5); } }
+        margin: 90px calc(100vw / 5.25) 90px 90px; } }
     .article-page__title_main, .article-page__title_subs {
       margin: 0 8px; }
     .article-page__title_main {
       font-size: 28px; }
     .article-page__title_subs {
       font-size: 18px; }
+
+.entry-header {
+  position: relative;
+  margin-left: 6rem; }
+
+.entry-content {
+  height: 420px; }
+  .entry-content h2 {
+    margin: 0 6rem 0 2rem; }
 
 .share {
   margin: 0 5rem 0 0; }
@@ -262,6 +235,7 @@ section {
     height: calc(100% - 5rem);
     margin: 0 0 20px 0;
     padding: 0;
+    color: #fff;
     border: 1px solid #fff;
     -webkit-transition: all .3s ease;
     transition: all .3s ease; }

@@ -1,25 +1,28 @@
 @import "variables";
 @import "mixins";
 @import "header";
+@import "footer";
+
 * {
   box-sizing: border-box;
 }
 
-html {
-  overflow: auto;
-}
+// html {
+//   overflow: auto;
+// }
 
 body {
-  min-width: 100%;
-  height: auto;
+  font-family: $font-family;
+  width: 100%;
+  max-height: 100vh;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   writing-mode: vertical-rl;
   background: $color-bg;
-  // @include writing-mode(rl);
-  // @include font-feature-settings('palt');
+//   // @include writing-mode(rl);
+//   // @include font-feature-settings('palt');
 }
 
 h1,
@@ -44,11 +47,13 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 100vw;
+//   min-width: 100vw;
   height: 100vh;
-  font-family: $font-family;
-  background: $color-bg;
-  color: $color-type;
+//   background: $color-bg;
+//   color: $color-type;
+  &-branding {
+    height: 100%;
+  }
 
   &-title {
     font-size: 28px;
@@ -58,55 +63,61 @@ a {
 
   &-content {
     min-width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
-section {
-  display: block;
-  min-width: 100%;
-  padding: 64px;
-}
+// section {
+//   display: block;
+//   min-width: 100%;
+//   padding: 64px;
+// }
 
 .content,
 .content.shelf {
   max-height: 30em;
 }
 
-.content {
-  &.shelf {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
+// .content {
+//   &.shelf {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
 
-.intro {
-  display: flex;
-  align-items: center;
-  width: calc(100vw - 64px);
+// .intro {
+//   display: flex;
+//   align-items: center;
+//   width: calc(100vw - 64px);
 
-  @include lg {
-    width: calc(100vw - 90px);
-  }
+//   @include lg {
+//     width: calc(100vw - 90px);
+//   }
 
-  &__text {
-    color: #fff;
-  }
+//   &__text {
+//     color: #fff;
+//   }
 
-  &__title {
-    font-size: 13px;
-  }
+//   &__title {
+//     font-size: 13px;
+//   }
 
-  &__content {
-    font-size: 18px;
-  }
-}
+//   &__content {
+//     font-size: 18px;
+//   }
+// }
 
 .article {
   position: relative;
   width: 16rem;
   height: 22rem;
   margin: 2rem;
+
+  @include lg {
+    height: 20rem;
+  }
 
   &__img {
     width: 100%;
@@ -158,24 +169,19 @@ section {
   }
 }
 
-.entry-header {
-  position: relative;
-}
-
 .article-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   
 
   &__img {
-    width: calc(100vw - 64px);
-    height: 100vh;
+    width: 70vw;
+    max-height: 100%;
     object-fit: cover;
 
     @include lg {
-      width: calc(50vw - 90px);
-      // TODO: スクロールバーの高さ分マイナスしないとはみ出る(後でScroll barの高さをJSで取得し、その数値をここに置く)
-      height: calc(100vh - 15px);
+      width: 50vw;
     }
   }
 
@@ -186,7 +192,7 @@ section {
 
     @include lg {
       margin-top: 64px;
-      margin-right: calc(100vw / 5.5);
+      margin: 90px calc(100vw / 5.25) 90px 90px;
     }
 
     &_main,
@@ -200,6 +206,21 @@ section {
 
     &_subs {
       font-size: 18px;
+    }
+  }
+}
+
+.entry {
+  &-header {
+    position: relative;
+    margin-left: 6rem;
+  }
+
+  &-content {
+    height: 420px;
+
+    h2 {
+      margin: 0 6rem 0 2rem;
     }
   }
 }
@@ -220,6 +241,7 @@ section {
     height: calc(100% - 5rem);
     margin: 0 0 20px 0;
     padding: 0;
+    color: $color-type;
     border: 1px solid $color-type;
     transition: all .3s ease;
 
