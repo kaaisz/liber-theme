@@ -18,7 +18,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   writing-mode: vertical-rl;
   background: $color-bg;
-  color: $color-type;
   // @include writing-mode(rl);
   // @include font-feature-settings('palt');
   overflow-y: hidden;
@@ -231,7 +230,7 @@ a {
   &__button {
     display: flex;
     align-items: center;
-    width: 2.75rem;
+    width: 3rem;
     height: 45%;
     margin: 0 5px 0;
     padding: 0;
@@ -246,7 +245,7 @@ a {
 
     p {
       margin: 0;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     &:hover {
@@ -256,6 +255,10 @@ a {
 
       svg {
         fill: $color-bg;
+      }
+
+      p {
+        color: $color-bg;
       }
     }
   }

@@ -101,7 +101,6 @@ body {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   background: #313131;
-  color: #fff;
   overflow-y: hidden; }
 
 h1,
@@ -292,7 +291,7 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 2.75rem;
+    width: 3rem;
     height: 45%;
     margin: 0 5px 0;
     padding: 0;
@@ -305,7 +304,7 @@ a {
       width: 80%; }
     .share__button p {
       margin: 0;
-      font-size: 12px; }
+      font-size: 14px; }
     .share__button:hover {
       background: #fff;
       color: #313131;
@@ -313,6 +312,8 @@ a {
       transition: all .3s ease; }
       .share__button:hover svg {
         fill: #313131; }
+      .share__button:hover p {
+        color: #313131; }
 
 #wpadminbar {
   -webkit-writing-mode: horizontal-tb;
