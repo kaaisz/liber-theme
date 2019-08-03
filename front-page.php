@@ -33,7 +33,7 @@
           // get_template_part( 'template-parts/content-page', get_post_type() );
         ?>
           <div class="article">
-            <a href=<?php the_permalink();?>>
+            <a class="article__container" href=<?php the_permalink();?>>
               <?php the_post_thumbnail('large', array('class' => 'article__img'));?>
               <div class="article__title ptrn-a">
                 <h3 class="article__title_main"><?php the_title();?></h3>
