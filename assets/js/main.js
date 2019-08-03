@@ -32,4 +32,8 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
+// prevent enable vertical scroll
+document.body.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+})
 

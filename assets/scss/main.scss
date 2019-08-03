@@ -21,6 +21,7 @@ body {
   color: $color-type;
   // @include writing-mode(rl);
   // @include font-feature-settings('palt');
+  overflow-y: hidden;
 }
 
 h1,

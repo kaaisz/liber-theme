@@ -101,7 +101,8 @@ body {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   background: #313131;
-  color: #fff; }
+  color: #fff;
+  overflow-y: hidden; }
 
 h1,
 h2,
