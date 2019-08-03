@@ -19,4 +19,17 @@ window.onload = function () {
   console.log('height', height);
 }
 
+document.body.onload = () => {
+  document.body.style.minHeight = window.innerHeight + 'px';
+  let timeoutId;
+}
+
+window.addEventListener('resize', () => {
+  clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(() => {
+    document.body.style.minHeight = window.innerHeight + 'px';
+  }, 500)
+});
+
 
