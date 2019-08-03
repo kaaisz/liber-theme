@@ -19,17 +19,17 @@ window.onload = function () {
   console.log('height', height);
 }
 
-document.body.onload = () => {
-  document.body.style.minHeight = window.innerHeight + 'px';
-  let timeoutId;
-}
+// get viewport height and multiple it by 1% to get a value for vh unit
+let vh = window.innerHeight * 0.01;
 
+// set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// listen to the resize event
 window.addEventListener('resize', () => {
-  clearTimeout(timeoutId);
-
-  timeoutId = setTimeout(() => {
-    document.body.style.minHeight = window.innerHeight + 'px';
-  }, 500)
-});
+  // apply same action above
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
 
 

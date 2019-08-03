@@ -11,6 +11,7 @@ body {
   font-family: $font-family;
   width: 100%;
   max-height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +45,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
 
   &-content {
     min-width: 100%;
@@ -55,7 +56,7 @@ a {
 
 .content,
 .content.shelf {
-  max-height: 30em;
+  max-height: 24em;
 }
 
 .content {
@@ -91,7 +92,7 @@ a {
 .article {
   position: relative;
   width: 16rem;
-  height: 22rem;
+  height: 20rem;
   margin: 2rem;
 
   @include lg {
@@ -196,7 +197,7 @@ a {
   }
 
   &-content {
-    height: 420px;
+    height: 380px;
 
     h2 {
       margin: 0 6rem 0 2rem;
