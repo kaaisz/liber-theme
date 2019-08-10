@@ -32,7 +32,7 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
+    box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
     background: #252525;
   }
 }
@@ -87,7 +87,7 @@ a {
 .intro {
   display: flex;
   align-items: center;
-  width: calc(100vw - 64px);
+  width: 100vw;
 
   @include lg {
     width: calc(100vw - 90px);
