@@ -46,13 +46,13 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 50px;
+  width: 50px;
   height: 100%;
   background: #1c1c1c;
   z-index: 4; }
   @media (min-width: 992px) {
     .nav__fixed {
-      max-width: 70px; } }
+      width: 65px; } }
 
 .nav__toggle, .nav__bar {
   display: inline-block;
@@ -109,16 +109,30 @@
   -webkit-transition: all .4s ease;
   transition: all .4s ease; }
   .nav__drawer.open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     position: fixed;
+    width: 100vw;
     height: 100%;
-    padding-right: 110px;
     background: #1c1c1c;
     -webkit-transform: translateX(0);
     transform: translateX(0);
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
     z-index: 3; }
+    @media (min-width: 992px) {
+      .nav__drawer.open {
+        width: 30vw;
+        height: 100%;
+        padding-right: 65px; } }
 
 .nav__menus {
   height: 100%;
@@ -126,6 +140,9 @@
   font-size: 22px;
   list-style-type: none;
   padding: calc(1.25rem + 2rem + 20px) 2rem 0; }
+  @media (min-width: 992px) {
+    .nav__menus {
+      padding: calc(1.25rem + 2rem + 20px) 0 0; } }
   .nav__menus_footer {
     height: 100%;
     display: -webkit-box;
@@ -134,9 +151,15 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    padding: 40px 0 0;
+    padding: 1rem 0;
     font-size: 14px;
-    list-style: none; }
+    list-style: none;
+    position: absolute;
+    left: 0; }
+    @media (min-width: 992px) {
+      .nav__menus_footer {
+        margin: 0 1.25rem 0;
+        padding: 1.25rem 0; } }
     .nav__menus_footer li {
       margin: 0 0 1rem; }
 
@@ -270,16 +293,18 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100vw; }
-  @media (min-width: 992px) {
-    .intro {
-      width: calc(100vw - 90px); } }
+  width: 100vw;
+  height: 380px; }
   .intro__text {
     color: #fff; }
   .intro__title {
     font-size: 13px; }
   .intro__content {
     font-size: 18px; }
+    @media (min-width: 992px) {
+      .intro__content {
+        font-size: 16px;
+        margin-left: 0; } }
   .intro__scroll {
     font-size: 12px;
     -webkit-writing-mode: horizontal-tb;
@@ -291,9 +316,6 @@ a {
   width: 16rem;
   height: 24rem;
   margin: 4rem; }
-  @media (min-width: 992px) {
-    .article {
-      height: 20rem; } }
   .article__container {
     position: relative; }
     .article__container::after {
@@ -369,23 +391,41 @@ a {
   -ms-flex-align: center;
   align-items: center; }
   .article-page__img {
-    width: 50vw;
+    width: 100vw;
     max-height: 100%;
     -o-object-fit: cover;
     object-fit: cover; }
     @media (min-width: 992px) {
       .article-page__img {
-        width: 50vw; } }
+        width: 40vw;
+        height: 100vh;
+        margin: 0 55px 0 0; } }
   .article-page__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     position: absolute;
     right: 0;
-    margin: 90px calc(100vw / 4.5) 90px 90px; }
+    width: calc(100% - 50px);
+    height: 100%;
+    margin: 0 50px 0 0;
+    padding: calc(0.75rem + 2rem + 20px) 90px; }
     @media (min-width: 992px) {
       .article-page__title {
-        margin-top: 64px;
-        margin: 90px calc(100vw / 5.25) 90px 90px; } }
+        width: calc(100% - 70px);
+        height: 100vh;
+        padding: calc(1.25rem + 2rem + 20px) 0;
+        margin: 0 65px 0 0; } }
     .article-page__title_main, .article-page__title_subs {
-      margin: 0 8px; }
+      margin: 0 8px;
+      line-height: 1; }
     .article-page__title_main {
       font-size: 28px; }
     .article-page__title_subs {

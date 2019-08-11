@@ -93,11 +93,9 @@ a {
 .intro {
   display: flex;
   align-items: center;
-  width: 100vw;
-
-  @include lg {
-    width: calc(100vw - 90px);
-  }
+  width: calc(100vw - 50px);
+  height: 380px;
+  margin: 0 50px 0 0;
 
   &__text {
     color: #fff;
@@ -109,6 +107,12 @@ a {
 
   &__content {
     font-size: 18px;
+
+    @include lg {
+      font-size: 16px;
+      margin-left: 0;
+    }
+
   }
 
   &__scroll {
@@ -122,10 +126,6 @@ a {
   width: 16rem;
   height: 24rem;
   margin: 4rem;
-
-  @include lg {
-    height: 20rem;
-  }
 
   &__container {
     position: relative;
@@ -216,28 +216,39 @@ a {
   
 
   &__img {
-    width: 50vw;
+    width: 100vw;
     max-height: 100%;
     object-fit: cover;
 
     @include lg {
-      width: 50vw;
+      width: 40vw;
+      height: 100vh;
+      margin: 0 55px 0 0;
     }
   }
 
   &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: 0;
-    margin: 90px calc(100vw / 4.5) 90px 90px;
+    width: calc(100% - 50px);
+    height: 100%;
+    margin: 0 50px 0 0;
+    padding: calc(0.75rem + 2rem + 20px) 90px;
 
     @include lg {
-      margin-top: 64px;
-      margin: 90px calc(100vw / 5.25) 90px 90px;
+      width: calc(100% - 70px);
+      height: 100vh;
+      padding: calc(1.25rem + 2rem + 20px) 0;
+      margin: 0 65px 0 0;
     }
 
     &_main,
     &_subs {
       margin: 0 8px;
+      line-height: 1;
     }
 
     &_main {

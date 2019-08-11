@@ -32,13 +32,13 @@
     position: fixed;
     display: flex;
     align-items: center;
-    max-width: 50px;
+    width: 50px;
     height: 100%;
     background: $color-bg-header;
     z-index: 4;
 
     @include lg {
-      max-width: 70px;
+      width: 65px;
     }
   }
 
@@ -112,14 +112,22 @@
     transition: all .4s ease;
 
     &.open {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       position: fixed;
+      width: 100vw;
       height: 100%;
-      padding-right: 110px;
       background: $color-bg-header;
       transform: translateX(0);
       transition: all .4s ease;
       z-index: 3;
+
+      @include lg {
+        width: 30vw;
+        height: 100%;
+        padding-right: 65px;
+      }
     }
   }
   
@@ -130,13 +138,24 @@
     list-style-type: none;
     padding: calc(1.25rem + 2rem + 20px) 2rem 0;
 
+    @include lg {
+      padding: calc(1.25rem + 2rem + 20px) 0 0;
+    }
+
     &_footer {
       height: 100%;
       display: flex;
       justify-content: flex-end;
-      padding: 40px 0 0;
+      padding: 1rem 0;
       font-size: 14px;
       list-style: none;
+      position: absolute;
+      left: 0;
+
+      @include lg {
+        margin: 0 1.25rem 0;
+        padding: 1.25rem 0;
+      }
 
       li {
         margin: 0 0 1rem;
