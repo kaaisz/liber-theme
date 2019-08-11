@@ -3,9 +3,18 @@
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
     <section class="intro" id="intro">
-      <div class="content">
-        <p class="intro__title"><?php the_field('top_title', 55);?></p>
-        <p class="intro__content"><?php the_field('top_description', 55);?></p>
+      <div class="content__wrap">
+        <div class="content">
+          <p class="intro__title"><?php the_field('top_title', 55);?></p>
+          <p class="intro__content"><?php the_field('top_description', 55);?></p>
+        </div>
+        <p class="intro__scroll">
+          <?php if (ua_smartphone() == true): ?>
+            Swipe to left
+          <?php else: ?>
+            Scroll to left
+          <?php endif;?>
+        </p>
       </div>
     </section>
     <section class="main" id="main">

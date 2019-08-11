@@ -79,6 +79,10 @@ a {
 }
 
 .content {
+  &__wrap {
+    display: flex;
+  }
+
   &.shelf {
     display: flex;
     flex-direction: column;
@@ -105,6 +109,11 @@ a {
 
   &__content {
     font-size: 18px;
+  }
+
+  &__scroll {
+    font-size: 12px;
+    writing-mode: horizontal-tb;
   }
 }
 

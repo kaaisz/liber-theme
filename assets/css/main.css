@@ -237,6 +237,11 @@ a {
 .content.shelf {
   max-height: 24em; }
 
+.content__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .content.shelf {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,6 +271,11 @@ a {
     font-size: 13px; }
   .intro__content {
     font-size: 18px; }
+  .intro__scroll {
+    font-size: 12px;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb; }
 
 .article {
   position: relative;
