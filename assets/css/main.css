@@ -46,7 +46,7 @@
   max-width: 70px;
   height: 100%;
   background: #1c1c1c;
-  z-index: 3; }
+  z-index: 4; }
 
 .nav__toggle, .nav__bar {
   display: inline-block;
@@ -109,7 +109,7 @@
     transform: translateX(0);
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
-    z-index: 2; }
+    z-index: 3; }
 
 .nav__menus {
   height: 100%;
@@ -139,11 +139,13 @@
   height: 100%;
   background: transparent;
   -webkit-transition: background-color .2s ease;
-  transition: background-color .2s ease; }
+  transition: background-color .2s ease;
+  z-index: -1; }
   .nav__overlay.active {
     background: rgba(0, 0, 0, 0.6);
     -webkit-transition: background-color .2s ease;
-    transition: background-color .2s ease; }
+    transition: background-color .2s ease;
+    z-index: 2; }
 
 @font-face {
   font-family: 'Yu Mincho', 'Yumincho';

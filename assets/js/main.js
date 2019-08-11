@@ -46,10 +46,8 @@ const overlay = document.querySelector('.nav__overlay');
 hamburger.addEventListener('click', function (){
   console.log('clicked');
   hamburger.classList.toggle('active');
-
   // drawer open
   drawer.classList.toggle('open');
-
   // enable overlay
   overlay.classList.toggle('active');
 });
@@ -60,4 +58,4 @@ overlay.addEventListener('click', function(){
   drawer.classList.remove('open');
   // enable overlay
   overlay.classList.remove('active');
-})
+});

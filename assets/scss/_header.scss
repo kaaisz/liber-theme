@@ -31,7 +31,7 @@
     max-width: 70px;
     height: 100%;
     background: $color-bg-header;
-    z-index: 3;
+    z-index: 4;
   }
 
   &__toggle,
@@ -107,7 +107,7 @@
       background: $color-bg-header;
       transform: translateX(0);
       transition: all .4s ease;
-      z-index: 2;
+      z-index: 3;
     }
   }
   
@@ -140,10 +140,12 @@
     height: 100%;
     background: transparent;
     transition: background-color .2s ease;
+    z-index: -1;
 
     &.active {
       background: rgba(0, 0, 0, 0.6);
       transition: background-color .2s ease;
+      z-index: 2;
     }
   }
 }
