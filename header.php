@@ -55,31 +55,33 @@
 						) );
 					?>
 				</div>
+				<div class="nav__overlay"></div>
 			<?php else : ?>
-			<nav id="site-navigation" class="nav main-navigation">
-				<div class="nav__fixed">
-					<div id="nav__toggle" class="nav__toggle">
-						<span class="nav__bar"></span>
-						<span class="nav__bar"></span>
-						<span class="nav__bar"></span>
+				<nav id="site-navigation" class="nav main-navigation">
+					<div class="nav__fixed">
+						<div id="nav__toggle" class="nav__toggle">
+							<span class="nav__bar"></span>
+							<span class="nav__bar"></span>
+							<span class="nav__bar"></span>
+						</div>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					</div>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				</nav><!-- #site-navigation -->
+				<div class="nav__drawer">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class'        => 'nav__menus',
+						) );
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'secondary-menu',
+							'menu_class'        => 'nav__menus_footer',
+						) );
+					?>
 				</div>
-			</nav><!-- #site-navigation -->
-			<div class="nav__drawer">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-						'menu_class'        => 'nav__menus',
-					) );
-					wp_nav_menu( array(
-						'theme_location' => 'menu-2',
-						'menu_id'        => 'secondary-menu',
-						'menu_class'        => 'nav__menus_footer',
-					) );
-				?>
-			</div>
+				<div class="nav__overlay"></div>
 			<?php	endif; ?>
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->

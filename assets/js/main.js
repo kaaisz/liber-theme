@@ -40,7 +40,8 @@ document.body.addEventListener('touchmove', function(e) {
 
 // hamburger menu
 const hamburger = document.querySelector('.nav__toggle');
-const drawer = document.querySelector('.nav__drawer')
+const drawer = document.querySelector('.nav__drawer');
+const overlay = document.querySelector('.nav__overlay');
 
 hamburger.addEventListener('click', function (){
   console.log('clicked');
@@ -48,4 +49,8 @@ hamburger.addEventListener('click', function (){
 
   // drawer open
   drawer.classList.toggle('open');
+
+  // enable overlay
+  overlay.classList.toggle('active');
+
 });
