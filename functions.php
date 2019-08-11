@@ -160,3 +160,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Identify user agent
+ */
+function ua_smartphone (){
+	// get user agent
+	$ua = $_SERVER['HTTP_USER_AGENT'];
+	// identify smart phone
+	$user_agent_list = array('iPhone', 'iPad', 'iPod', 'Android');
+
+	foreach ($user_agent_list as $user_agent_sp) {
+		// if UA has any word above, return true, otherwise, return false
+		if (strpos($ua, $user_agent_sp) !== false) {
+			return true;
+		}
+	} return false;
+}
