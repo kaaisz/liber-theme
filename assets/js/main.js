@@ -52,5 +52,12 @@ hamburger.addEventListener('click', function (){
 
   // enable overlay
   overlay.classList.toggle('active');
-
 });
+
+overlay.addEventListener('click', function(){
+  hamburger.classList.remove('active');
+  // drawer open
+  drawer.classList.remove('open');
+  // enable overlay
+  overlay.classList.remove('active');
+})
