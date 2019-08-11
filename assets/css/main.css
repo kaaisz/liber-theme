@@ -293,18 +293,19 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100vw;
-  height: 380px; }
+  width: calc(100vw - 50px);
+  height: 380px;
+  margin: 0 50px 0 0; }
   .intro__text {
     color: #fff; }
   .intro__title {
     font-size: 13px; }
   .intro__content {
-    font-size: 18px; }
+    font-size: 16px;
+    margin-left: 0; }
     @media (min-width: 992px) {
       .intro__content {
-        font-size: 16px;
-        margin-left: 0; } }
+        font-size: 18px; } }
   .intro__scroll {
     font-size: 12px;
     -webkit-writing-mode: horizontal-tb;
