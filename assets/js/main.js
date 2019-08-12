@@ -33,9 +33,11 @@ window.addEventListener('resize', () => {
 })
 
 // prevent enable vertical scroll
-document.body.addEventListener('touchmove', function(e) {
+const scrollOff = function (e) {
   e.preventDefault();
-})
+}
+document.body.addEventListener('touchmove', scrollOff, false);
+document.body.removeEventListener('touchmove', scrollOff, false);
 
 
 // hamburger menu
