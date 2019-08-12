@@ -1,5 +1,14 @@
 <?php get_header();?>
-
+<div class="intro__scroll">
+  <?php if (ua_smartphone() == true): ?>
+    <p class="intro__scroll-text">Swipe to left</p>
+  <?php else: ?>
+    <p class="intro__scroll-text">Scroll to left</p>
+  <?php endif;?>
+  <span class="intro__scroll-bar"></span>
+  <span class="intro__scroll-bar"></span>
+  <span class="intro__scroll-bar"></span>
+</div>
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
     <section class="intro" id="intro">
@@ -8,13 +17,6 @@
           <p class="intro__title"><?php the_field('top_title', 55);?></p>
           <p class="intro__content"><?php the_field('top_description', 55);?></p>
         </div>
-        <p class="intro__scroll">
-          <?php if (ua_smartphone() == true): ?>
-            Swipe to left
-          <?php else: ?>
-            Scroll to left
-          <?php endif;?>
-        </p>
       </div>
     </section>
     <section class="main" id="main">

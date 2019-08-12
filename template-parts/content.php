@@ -12,6 +12,16 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-page'); ?>>
 	<header class="entry-header">
 	<?php the_post_thumbnail('large', array('class' => 'article-page__img')); ?>
+	<div class="intro__scroll">
+		<?php if (ua_smartphone() == true): ?>
+			<p class="intro__scroll-text">Swipe to left</p>
+		<?php else: ?>
+			<p class="intro__scroll-text">Scroll to left</p>
+		<?php endif;?>
+		<span class="intro__scroll-bar"></span>
+		<span class="intro__scroll-bar"></span>
+		<span class="intro__scroll-bar"></span>
+	</div>
 		<?php	if ( is_singular() ) :?>
 			<div class="article-page__title">
 				<h1 class="article-page__title_main"><?php the_title();?></h1>
