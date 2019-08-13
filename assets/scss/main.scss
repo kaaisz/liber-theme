@@ -118,8 +118,9 @@ a {
 
   &__scroll {
     position: fixed;
-    bottom: 0;
+    bottom: 16px;
     right: 48vw;
+    transition: all .3s linear;
 
     &-text {
       position: relative;

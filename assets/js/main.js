@@ -69,3 +69,27 @@ overlay.addEventListener('click', function(){
   body.style.overflowX = 'scroll';
   e.preventDefault();
 });
+
+// control position for scroll indicator
+const scrollIndicator = document.querySelector('.intro__scroll');
+const intro = document.querySelector('.intro');
+const edgeOfIntro = intro.offsetWidth;
+
+function hideIndicator() {
+  // debug
+  // console.log(edgeOfIntro, window.scrollX);
+
+  // when scroll indicator has reached to section class = main
+  if (-(window.scrollX) >= edgeOfIntro) {
+    // hide scroll indicator
+
+    // debug
+    // console.log('hide indicator');
+    scrollIndicator.style.bottom = '-100px';
+  } else {
+    scrollIndicator.style.bottom = '16px';
+  }
+}
+
+// console will change while scroll is active
+window.addEventListener('scroll', hideIndicator);

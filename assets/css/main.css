@@ -312,8 +312,10 @@ a {
         font-size: 18px; } }
   .intro__scroll {
     position: fixed;
-    bottom: 0;
-    right: 48vw; }
+    bottom: 16px;
+    right: 48vw;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear; }
     .intro__scroll-text {
       position: relative;
       margin-top: 0;
