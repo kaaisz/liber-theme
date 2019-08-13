@@ -20,6 +20,7 @@ body {
   background: $color-bg;
   // @include writing-mode(rl);
   // @include font-feature-settings('palt');
+  overflow-x: scroll;
   overflow-y: hidden;
 
   &::-webkit-scrollbar {

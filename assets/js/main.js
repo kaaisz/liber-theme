@@ -46,19 +46,18 @@ const hamburger = document.querySelector('.nav__toggle');
 const drawer = document.querySelector('.nav__drawer');
 const overlay = document.querySelector('.nav__overlay');
 
-hamburger.addEventListener('click', function (){
+hamburger.addEventListener('click', function (e){
+  // fixed background when overlay is enable
+  if(body.style.overflowX == 'hidden') {
+    body.style.overflowX = 'scroll';
+  } else {
+    body.style.overflowX = 'hidden';
+  }
   hamburger.classList.toggle('active');
   // drawer open
   drawer.classList.toggle('open');
   // enable overlay
   overlay.classList.toggle('active');
-
-  // fixed background when overlay is enable
-  if(body.style.overflowX == 'scroll') {
-    body.style.overflowX = 'hidden';
-  } else {
-    body.style.overflowX = 'scroll';
-  }
 });
 
 overlay.addEventListener('click', function(){
@@ -68,4 +67,5 @@ overlay.addEventListener('click', function(){
   // enable overlay
   overlay.classList.remove('active');
   body.style.overflowX = 'scroll';
+  e.preventDefault();
 });

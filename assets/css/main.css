@@ -213,6 +213,7 @@ body {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   background: #313131;
+  overflow-x: scroll;
   overflow-y: hidden; }
   body::-webkit-scrollbar {
     height: 6px;
