@@ -1,23 +1,43 @@
 'use strict';
 
-// window.onload = function () {
-//   let width = 0, height = 0;
-//   if( typeof( window.innerWidth ) == 'number' ) {
-//     // if not IE
-//     width = window.innerWidth;
-//     height = window.innerHeight;
-//   } else if ( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-//     // IE6+
-//     width = document.documentElement.clientWidth;
-//     height = document.documentElement.clientHeight;
-//   } else if ( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-//     width = document.body.clientWidth;
-//     height = document.body.clientHeight;
-//   }
+window.onload = function () {
+  let width = 0, height = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    // if not IE
+    width = window.innerWidth;
+    height = window.innerHeight;
+  } else if ( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    // IE6+
+    width = document.documentElement.clientWidth;
+    height = document.documentElement.clientHeight;
+  } else if ( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    width = document.body.clientWidth;
+    height = document.body.clientHeight;
+  }
 
-//   console.log('width', width);
-//   console.log('height', height);
-// }
+  console.log('width', width);
+  console.log('height', height);
+
+  function hideIndicator() {
+    // debug
+    // console.log(edgeOfIntro, window.scrollX);
+    scrollIndicator.style.bottom = '20px';
+    // when scroll indicator has reached to section class = main
+    if (-(window.scrollX) >= edgeOfIntro) {
+      // hide scroll indicator
+  
+      // debug
+      // console.log('hide indicator');
+      scrollIndicator.style.opacity = '0';
+    } else {
+      scrollIndicator.style.opacity = '1';
+    }
+  }
+  
+  // console will change while scroll is active
+  window.addEventListener('scroll', hideIndicator);
+  
+}
 
 // get viewport height and multiple it by 1% to get a value for vh unit
 let vh = window.innerHeight * 0.01;
@@ -75,21 +95,3 @@ const scrollIndicator = document.querySelector('.intro__scroll');
 const intro = document.querySelector('.intro');
 const edgeOfIntro = intro.offsetWidth;
 
-function hideIndicator() {
-  // debug
-  // console.log(edgeOfIntro, window.scrollX);
-
-  // when scroll indicator has reached to section class = main
-  if (-(window.scrollX) >= edgeOfIntro) {
-    // hide scroll indicator
-
-    // debug
-    // console.log('hide indicator');
-    scrollIndicator.style.bottom = '-100px';
-  } else {
-    scrollIndicator.style.bottom = '16px';
-  }
-}
-
-// console will change while scroll is active
-window.addEventListener('scroll', hideIndicator);
