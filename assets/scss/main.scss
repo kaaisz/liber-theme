@@ -118,13 +118,17 @@ a {
 
   &__scroll {
     position: fixed;
-    bottom: 16px;
+    bottom: 20px;
     right: 48vw;
-    transition: all .3s linear;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    margin: 0;
+    transform: translate3d(0, 0, 0);
+    transform: translateZ(1px);
 
     &-text {
       position: relative;
-      margin-top: 0;
+      margin: 0;
       font-size: 12px;
       writing-mode: horizontal-tb;
     }
@@ -278,6 +282,7 @@ a {
   &__title {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     position: absolute;
     right: 0;

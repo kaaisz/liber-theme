@@ -312,13 +312,18 @@ a {
         font-size: 18px; } }
   .intro__scroll {
     position: fixed;
-    bottom: 16px;
+    bottom: 20px;
     right: 48vw;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear; }
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px); }
     .intro__scroll-text {
       position: relative;
-      margin-top: 0;
+      margin: 0;
       font-size: 12px;
       -webkit-writing-mode: horizontal-tb;
       -ms-writing-mode: lr-tb;
@@ -459,6 +464,9 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
