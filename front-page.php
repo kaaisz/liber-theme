@@ -19,11 +19,9 @@
         </div>
       </div>
     </section>
-    <section class="main" id="main">
+    <section class="main" id="article">
       <header class="page-header">
-        <?php
-        the_archive_title( '<h2 class="page-title">', '</h2>' );
-        ?>
+        <h2 class="page-title">書架</h2>
       </header><!-- .page-header -->        
         <div class="content shelf">
         <?php
@@ -63,6 +61,7 @@
       endif;
       ?>
       </div>
+      <?php get_template_part ('template-parts/content-social', 'none');?>
     </section>
   </main><!-- #main -->
 </div><!-- #primary -->
