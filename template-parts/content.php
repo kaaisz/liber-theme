@@ -23,12 +23,12 @@
 		<span class="intro__scroll-bar"></span>
 	</div>
 		<?php	if ( is_singular() ) :?>
-			<div class="article-page__title">
+			<div class="article-page__title intro">
 				<h1 class="article-page__title_main"><?php the_title();?></h1>
 				<p class="article-page__title_subs"><?php the_field('article_sub_title'); ?></p>
 			</div>
 		<?php else : ?>
-			<div class="article-page__title">
+			<div class="article-page__title intro">
 				<h2 class="entry-title article-page__title"><a href="<?php get_permalink();?>" rel="bookmark"><?php the_title();?></a></h2>
 				<div class="article-page__title_subs"><?php the_field('article_sub_title'); ?></div>
 			</div>
