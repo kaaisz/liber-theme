@@ -122,6 +122,8 @@
     -ms-flex-pack: center;
     justify-content: center;
     position: fixed;
+    top: 0;
+    right: 0;
     width: 100vw;
     height: 100%;
     background: #1c1c1c;
