@@ -181,6 +181,7 @@ a {
 
   &__container {
     position: relative;
+    background: $color-bg-black;
 
     &::after {
       content: "";
@@ -189,7 +190,7 @@ a {
       right: 13px;
       display: block;
       height: 100%;
-      border-right: 6px solid #1c1c1c;
+      border-right: 6px solid $color-bg-header;
       opacity: 0.3;
       filter: blur(2px);
       z-index: 1;

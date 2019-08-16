@@ -375,7 +375,8 @@ a {
   height: 24rem;
   margin: 4rem; }
   .article__container {
-    position: relative; }
+    position: relative;
+    background: #000; }
     .article__container::after {
       content: "";
       position: absolute;
