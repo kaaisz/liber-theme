@@ -34,13 +34,21 @@
     right: 0;
     display: flex;
     align-items: center;
-    width: 50px;
+    width: $header-width-sm;
     height: 100%;
     background: $color-bg-header;
     z-index: 4;
 
+    @include md {
+      width: $header-width-md;
+    }
+
     @include lg {
-      width: 65px;
+      width: $header-width-lg;
+    }
+
+    @include xl {
+      width: $header-width-xl;
     }
   }
 

@@ -24,3 +24,17 @@ $screen-sm-min: 576px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
+
+// header width
+$header-width-sm: 50px;
+$header-width-md: 50px;
+$header-width-lg: 65px;
+$header-width-xl: 65px;
+
+// intro width
+@mixin intro-width($width) {
+  width: calc(100vw - 50px);
+  @media (min-width: $screen-lg-min) {
+    width: calc(100vw - 65px);
+  }
+}
