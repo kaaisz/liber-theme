@@ -11,7 +11,7 @@
 </div>
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
-    <section class="intro" id="intro">
+    <section class="intro indicator-trigger" id="intro">
       <div class="content__wrap">
         <div class="content">
           <p class="intro__title"><?php the_field('top_title', 55);?></p>
