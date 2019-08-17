@@ -197,117 +197,6 @@
   font-family: 'Yu Mincho', 'Yumincho';
   src: url("../woff/yumin.woff") format("woff"); }
 
-.copyright {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 3rem 1rem;
-  text-align: right; }
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  font-family: "Yu Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
-  width: 100%;
-  max-height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  background: #313131;
-  overflow-x: scroll;
-  overflow-y: hidden; }
-  body::-webkit-scrollbar {
-    height: 6px;
-    background: transparent; }
-  body::-webkit-scrollbar-thumb {
-    background: #656565; }
-  body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
-    box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
-    background: #252525; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-a,
-span,
-ul,
-li {
-  text-combine-upright: digits 2;
-  color: #fff; }
-
-p {
-  font-size: 16px; }
-
-a {
-  text-decoration: none; }
-
-.site {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 100%;
-  position: relative; }
-  .site-content {
-    min-width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0 50px 0 0; }
-    @media (min-width: 768px) {
-      .site-content {
-        margin: 0 50px 0 0; } }
-    @media (min-width: 992px) {
-      .site-content {
-        margin: 0 65px 0 0; } }
-    @media (min-width: 1200px) {
-      .site-content {
-        margin: 0 65px 0 0; } }
-
-.content,
-.content.shelf {
-  max-height: 24em; }
-
-.content__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.content.shelf {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
 .intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,7 +206,13 @@ a {
   align-items: center;
   width: calc(100vw - 50px);
   height: 380px; }
+  @media (min-width: 768px) {
+    .intro {
+      width: calc(100vw - 50px); } }
   @media (min-width: 992px) {
+    .intro {
+      width: calc(100vw - 65px); } }
+  @media (min-width: 1200px) {
     .intro {
       width: calc(100vw - 65px); } }
   .intro.main {
@@ -335,10 +230,9 @@ a {
     color: #fff; }
   .intro__title {
     font-size: 13px;
-    margin-right: 0; }
+    margin: 0; }
   .intro__content {
-    font-size: 16px;
-    margin-left: 0; }
+    font-size: 16px; }
     @media (min-width: 992px) {
       .intro__content {
         font-size: 18px; } }
@@ -497,6 +391,14 @@ a {
           font-weight: 400;
           margin: 0 .5rem; }
 
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff"); }
+
 .article-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,13 +412,15 @@ a {
   align-items: center; }
   .article-page__img {
     width: 100vw;
-    max-height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    max-height: 100vh;
     -o-object-fit: cover;
     object-fit: cover; }
     @media (min-width: 992px) {
       .article-page__img {
         width: 40vw;
-        height: 100vh; } }
+        height: calc(var(--vh, 1vh) * 100);
+        max-height: 100vh; } }
   .article-page__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -539,7 +443,8 @@ a {
     @media (min-width: 992px) {
       .article-page__title {
         width: 100%;
-        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        max-height: 100vh;
         padding: calc(1.25rem + 2rem + 20px) 0; } }
     .article-page__title_main, .article-page__title_subs {
       margin: 0 8px;
@@ -563,6 +468,127 @@ a {
     margin: 0 3rem 0 1.5rem; }
   .entry-content h5 {
     margin: 0 2rem 0 1rem; }
+
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Yu Mincho', 'Yumincho';
+  src: url("../woff/yumin.woff") format("woff"); }
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 3rem 1rem;
+  text-align: right; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Yu Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "HGP明朝B", serif;
+  width: 100%;
+  max-height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  background: #313131;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+  body::-webkit-scrollbar {
+    height: 6px;
+    background: transparent; }
+  body::-webkit-scrollbar-thumb {
+    background: #656565; }
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
+    box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
+    background: #252525; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+span,
+ul,
+li {
+  text-combine-upright: digits 2;
+  color: #fff; }
+
+p {
+  font-size: 16px; }
+
+a {
+  text-decoration: none; }
+
+.site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  position: relative; }
+  .site-content {
+    min-width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 50px 0 0; }
+    @media (min-width: 768px) {
+      .site-content {
+        margin: 0 50px 0 0; } }
+    @media (min-width: 992px) {
+      .site-content {
+        margin: 0 65px 0 0; } }
+    @media (min-width: 1200px) {
+      .site-content {
+        margin: 0 65px 0 0; } }
+  .site-main .main {
+    padding: 0 8rem; }
+
+.content,
+.content.shelf {
+  max-height: 24em; }
+
+.content__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.content.shelf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .share {
   margin: 0 5rem; }
