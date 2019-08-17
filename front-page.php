@@ -7,7 +7,7 @@
  * @package liber-theme
  */
  get_header();?>
- 
+
 <!-- Website toppage - 書架 -->
 
 <!-- invoke scroll indicator -->
@@ -18,11 +18,18 @@
     <section class="intro indicator-trigger" id="intro">
       <div class="content__wrap">
         <div class="content">
-          <p class="intro__title"><?php the_field('top_title', 55);?></p>
+
+          <!-- top_title is optional -->
+          <?php if (!get_field('top_title')): ?>
+            <p class="intro__title"><?php the_field('top_title', 55);?></p>
+          <?php endif; ?>
+          <!-- top_description is required -->
           <p class="intro__content"><?php the_field('top_description', 55);?></p>
+          
         </div>
       </div>
     </section>
+
     <section class="main" id="article">
       <header class="page-header">
         <h2 class="page-title">書架</h2>
