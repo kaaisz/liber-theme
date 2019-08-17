@@ -8,7 +8,6 @@
  *
  * @package liber-theme
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -23,7 +22,6 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'liber-theme' ); ?></a> -->
 
 	<header id="masthead" class="header site-header">
 		<div class="site-branding">
