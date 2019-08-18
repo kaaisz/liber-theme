@@ -73,6 +73,10 @@
       ?>
       </div>
       <?php get_template_part ('template-parts/content-social', 'none');?>
+      <div class="share">
+        <h3>Twitter</h3>
+        <a class="twitter-timeline" data-width="230" data-height="380" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
     </section>
   </main><!-- #main -->
 </div><!-- #primary -->
