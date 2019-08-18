@@ -450,9 +450,15 @@
       margin: 0 8px;
       line-height: 1; }
     .article-page__title_main {
-      font-size: 28px; }
+      font-size: 26px; }
+      @media (min-width: 992px) {
+        .article-page__title_main {
+          font-size: 28px; } }
     .article-page__title_subs {
-      font-size: 18px; }
+      font-size: 16px; }
+      @media (min-width: 992px) {
+        .article-page__title_subs {
+          font-size: 18px; } }
 
 .entry-header {
   position: relative; }

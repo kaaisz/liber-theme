@@ -48,11 +48,19 @@
         }
 
         &_main {
-        font-size: 28px;
+            font-size: 26px;
+
+            @include lg {
+                font-size: 28px;
+            }
         }
 
         &_subs {
-        font-size: 18px;
+            font-size: 16px;
+
+            @include lg {
+                font-size: 18px;
+            }
         }
     }
 }
