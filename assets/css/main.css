@@ -461,13 +461,20 @@
   height: 380px;
   margin: 0 6rem; }
   .entry-content h2 {
-    margin: 0 6rem 0 2rem; }
+    margin: 0;
+    padding: 0 6rem 0 2rem; }
   .entry-content h3 {
-    margin: 0 4rem 0 1.75rem; }
+    margin: 0;
+    padding: 0 4rem 0 1.75rem; }
   .entry-content h4 {
-    margin: 0 3rem 0 1.5rem; }
+    margin: 0;
+    padding: 0 3rem 0 1.5rem; }
   .entry-content h5 {
-    margin: 0 2rem 0 1rem; }
+    margin: 0;
+    padding: 0 2rem 0 1rem; }
+  .entry-content p strong span {
+    color: #000;
+    background: rgba(255, 255, 255, 0.8); }
 
 @font-face {
   font-family: 'Yu Mincho', 'Yumincho';
