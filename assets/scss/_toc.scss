@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+
+.ez-toc-title {
+  font-size: 1.5em;
+  font-weight: $bold;
+}
+
+.ez-toc-list {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2;
+
+  & li {
+    font-weight: $bold;
+  }
+
+  & ul {
+    padding: 1rem 0;
+  }
+
+  & ul li {
+    font-weight: $regular;
+  }
+}
