@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   @include intro-width(50px);
-  height: 380px;
+  height: $common-height;
 
   &.main {
     display: flex;
