@@ -11,7 +11,7 @@
 
 <div class="intro__scroll">
   <?php if (ua_smartphone() == true): ?>
-    <p class="intro__scroll-text">Swipe to left</p>
+    <p class="intro__scroll-text">Swipe to right</p>
   <?php else: ?>
     <p class="intro__scroll-text">Scroll to left</p>
   <?php endif;?>
