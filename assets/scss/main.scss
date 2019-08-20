@@ -57,6 +57,7 @@ li {
 
 p {
   font-size: 16px;
+  line-height: 1.75;
 }
 
 a {
@@ -101,7 +102,7 @@ a {
 
 .content,
 .content.shelf {
-  max-height: 24em;
+  max-height: $common-height;
 }
 
 .content {
