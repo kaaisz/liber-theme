@@ -14,7 +14,7 @@
 	<!-- invoke scroll indicator -->
 	<?php get_template_part( 'template-parts/intro-scroll-indicator', 'none' )?>
 
-	<header class="entry-header">
+	<header class="entry-header indicator-trigger">
 		<?php if (has_post_thumbnail()):?>
 			<?php the_post_thumbnail('large', array('class' => 'article-page__img'));?>
 		<?php else : ?>
