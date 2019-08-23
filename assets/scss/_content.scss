@@ -71,8 +71,12 @@
     }
 
     &-content {
-        height: $common-height;
+        @include common-height;
         margin: 0 6rem;
+
+        @include lg {
+            max-height: 480px;
+        }
 
         h2 {
             margin: 0;
@@ -95,7 +99,7 @@
         }
 
         p strong span {
-            color: $color-black;
+            color: $color-cover;
             background: $color-span-bg;
         }
     }

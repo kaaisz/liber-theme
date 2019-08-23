@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   @include intro-width(50px);
-  height: $common-height;
+  @include common-height;
 
   &.main {
     display: flex;
@@ -89,13 +89,14 @@
 
 .article {
   position: relative;
-  width: 16rem;
-  height: 100%;
+  width: 256px;
+  max-height: 480px;
   margin: 4rem;
+  height: 380px;
 
   &__container {
     position: relative;
-    background: $color-black;
+    background: $color-cover;
 
     &::after {
       content: "";
@@ -104,15 +105,15 @@
       right: 13px;
       display: block;
       height: 100%;
-      border-right: 6px solid $color-bg-header;
-      opacity: 0.3;
+      border-right: 6px solid $color-black;
+      opacity: 0.2;
       filter: blur(2px);
       z-index: 1;
       transition: opacity 0.2s linear;
     }
 
     &:hover::after {
-      opacity: 0.5;
+      opacity: 0.3;
       transition: opacity 0.2s linear;
     }
   }
@@ -147,7 +148,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.75rem;
+    padding: 1.25rem;
 
     &.ptrn-a {
       top: 0;
