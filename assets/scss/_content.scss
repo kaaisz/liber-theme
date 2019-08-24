@@ -98,9 +98,13 @@
             padding: 0 2rem 0 1rem;
         }
 
-        p strong span {
-            color: $color-cover;
-            background: $color-span-bg;
+        p {
+            text-indent: 1rem;
+
+            & strong span {
+                color: $color-cover;
+                background: $color-span-bg;
+            }
         }
     }
 }

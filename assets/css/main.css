@@ -492,9 +492,11 @@
   .entry-content h5 {
     margin: 0;
     padding: 0 2rem 0 1rem; }
-  .entry-content p strong span {
-    color: #222;
-    background: rgba(255, 255, 255, 0.8); }
+  .entry-content p {
+    text-indent: 1rem; }
+    .entry-content p strong span {
+      color: #222;
+      background: rgba(255, 255, 255, 0.8); }
 
 @font-face {
   font-family: 'Yu Mincho', 'Yumincho';
