@@ -243,15 +243,16 @@
         font-size: 18px; } }
   .intro__scroll {
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     right: 48vw;
     -webkit-transition: opacity .3s linear;
     transition: opacity .3s linear;
-    margin: 0;
+    margin: 0 0 20px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translateZ(1px);
-    transform: translateZ(1px); }
+    transform: translateZ(1px);
+    white-space: nowrap; }
     .intro__scroll-text {
       position: relative;
       margin: 0;
@@ -556,6 +557,18 @@ body {
   overflow-x: scroll;
   overflow-y: hidden; }
 
+::-webkit-scrollbar {
+  height: 6px;
+  background: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background: #656565; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
+  box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
+  background: #252525; }
+
 h1,
 h2,
 h3,
@@ -587,9 +600,12 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
+  width: intrinsic;
+  /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;
+  /* Firefox/Gecko */
+  width: -webkit-max-content;
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
   -webkit-writing-mode: vertical-rl;
@@ -597,15 +613,6 @@ a {
   writing-mode: vertical-rl;
   overflow-x: scroll;
   overflow-y: hidden; }
-  .site::-webkit-scrollbar {
-    height: 6px;
-    background: transparent; }
-  .site::-webkit-scrollbar-thumb {
-    background: #656565; }
-  .site::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
-    box-shadow: inset 0 0 6px rgba(120, 120, 120, 0.2);
-    background: #252525; }
   .site-content {
     min-width: 100vw;
     display: -webkit-box;

@@ -2,7 +2,7 @@
 
 window.onload = function () {
 
-  console.log('userAgent', navigator.userAgent);
+  // console.log('userAgent', navigator.userAgent);
   let width = 0, height = 0;
   if( typeof( window.innerWidth ) == 'number' ) {
     // if not IE
@@ -17,8 +17,8 @@ window.onload = function () {
     height = document.body.clientHeight;
   }
 
-  console.log('width', width);
-  console.log('height', height);
+  // console.log('width', width);
+  // console.log('height', height);
 
   // get viewport height and multiple it by 1% to get a value for vh unit
   let vh = window.innerHeight * 0.01;
@@ -40,8 +40,7 @@ window.onload = function () {
 
   function hideIndicator() {
     // debug
-    // console.log(edgeOfIntro, window.scrollX);
-    scrollIndicator.style.bottom = '20px';
+    console.log(edgeOfIntro, window.scrollX);
     // when scroll indicator has reached to section class = main
     if (-(window.scrollX) >= edgeOfIntro) {
       // hide scroll indicator
@@ -55,6 +54,11 @@ window.onload = function () {
   
   // console will change while scroll is active
   window.addEventListener('scroll', hideIndicator);
+
+  // to fix scroll indicator position
+  // window.addEventListener('scroll', function() {
+  //   scrollIndicator.style.transform = 'translateX(' + window.scrollX + 'px)';
+  // });
 
   // hamburger menu
   const body = document.querySelector('body');
