@@ -107,6 +107,11 @@
                 background: $color-span-bg;
             }
         }
+
+        li {
+            // resolve for firefox line-height
+            line-height: 1.5;
+        }
     }
 }
   

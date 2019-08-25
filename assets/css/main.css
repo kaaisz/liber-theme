@@ -545,6 +545,8 @@
       text-indent: 0;
       color: #222;
       background: rgba(255, 255, 255, 0.8); }
+  .entry-content li {
+    line-height: 1.5; }
 
 @font-face {
   font-family: 'Yu Mincho', 'Yumincho';
