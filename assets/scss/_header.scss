@@ -4,12 +4,28 @@
 // wordpress website common content
 .site {
   &-header {
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
     align-items: center;
-    width: auto;
-    // max-height: 100vh;
-    background: $color-bg-header;
+    width: 100%;
+    height: $header-width-sm;
+    background: transparent;
     color: $color-type;
+    z-index: 1;
+
+    @include md {
+      height: $header-width-md;
+    }
+
+    @include lg {
+      height: $header-width-lg;
+    }
+
+    @include xl {
+      height: $header-width-xl;
+    }
   }
 
   &-branding {
@@ -25,31 +41,59 @@
     @include lg {
       font-size: 28px;
     }
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+      width: $header-width-sm;
+      height: 100%;
+      padding: $header-width-sm 0 0 0;
+      background: $color-bg-header;
+
+      @include md {
+        width: $header-width-md;
+        padding: $header-width-md 0 0 0;
+      }
+  
+      @include lg {
+        width: $header-width-lg;
+        padding: $header-width-lg 0 0 0;
+      }
+  
+      @include xl {
+        width: $header-width-xl;
+        padding: $header-width-xl 0 0 0;
+      }
+    }
   }
 }
 
 .nav {
   &__fixed {
+    writing-mode: vertical-rl;
     position: fixed;
     top: 0;
     right: 0;
     display: flex;
     align-items: center;
     width: $header-width-sm;
-    height: 100%;
+    height: $header-width-sm;
     background: $color-bg-header;
     z-index: 4;
 
     @include md {
       width: $header-width-md;
+      height: $header-width-md;
     }
 
     @include lg {
       width: $header-width-lg;
+      height: $header-width-lg;
     }
 
     @include xl {
       width: $header-width-xl;
+      height: $header-width-xl;
     }
   }
 
@@ -63,11 +107,11 @@
     position: relative;
     width: 25px;
     height: 20px;
-    margin: 0.75rem 0.75rem 2rem;
+    margin: 0.75rem;
     cursor: pointer;
 
     @include lg{
-      margin: 1.25rem 1.25rem 2rem;
+      margin: 1.25rem;
     }
     
     &.active .nav__bar:nth-of-type(1) {
@@ -118,7 +162,7 @@
   }
 
   &__drawer {
-    // display: none;
+    display: none;
     transform: translateX(100%);
     transition: all .4s ease;
 
@@ -185,8 +229,10 @@
     background: transparent;
     transition: background-color .2s ease;
     z-index: -1;
+    display: none;
 
     &.active {
+      display: block;
       background: rgba(0, 0, 0, 0.6);
       transition: background-color .2s ease;
       z-index: 2;

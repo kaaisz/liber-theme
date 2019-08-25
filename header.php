@@ -35,7 +35,6 @@
 						<span class="nav__bar"></span>
 						<span class="nav__bar"></span>
 					</div>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
 			</nav><!-- #site-navigation -->
 			<div class="nav__drawer">
@@ -53,6 +52,14 @@
 				?>
 			</div>
 			<div class="nav__overlay"></div>
+
+		</div><!-- .site-branding -->
+	</header><!-- #masthead -->
+			
+	<div id="page" class="site">
+		<div class="site-title_wrap">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		</div>
 		<?php else : ?>
 			<nav id="site-navigation" class="nav main-navigation">
 				<div class="nav__fixed">
@@ -61,7 +68,6 @@
 						<span class="nav__bar"></span>
 						<span class="nav__bar"></span>
 					</div>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
 			</nav><!-- #site-navigation -->
 			<div class="nav__drawer">
@@ -79,12 +85,14 @@
 				?>
 			</div>
 			<div class="nav__overlay"></div>
-		<?php	endif; ?>
 	</div><!-- .site-branding -->
 </header><!-- #masthead -->
 
 <div id="page" class="site">
-
+<div class="site-title_wrap">
+	<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+</div>
+<?php	endif; ?>
 	
 
 	<div id="content" class="site-content">
