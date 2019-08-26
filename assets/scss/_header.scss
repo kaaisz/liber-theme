@@ -195,6 +195,7 @@
     font-size: 22px;
     list-style-type: none;
     padding: calc(1.25rem + 2rem + 20px) 2rem 0;
+    line-height: 1.65;
 
     @include lg {
       padding: calc(1.25rem + 2rem + 20px) 0 0;
