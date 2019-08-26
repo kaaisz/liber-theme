@@ -756,6 +756,17 @@ a {
       .share__button:hover p {
         color: #313131; }
 
+.iframe-cont {
+  width: 280px;
+  height: 100%;
+  min-height: 380px;
+  height: calc(var(--vh, 1vh) * 82.5);
+  overflow-x: hidden;
+  overflow-y: scroll; }
+  @media (min-width: 768px) {
+    .iframe-cont {
+      max-height: 480px; } }
+
 #wpadminbar {
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: lr-tb;

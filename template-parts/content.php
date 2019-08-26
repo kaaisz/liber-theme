@@ -63,7 +63,9 @@
 		?>
 		<?php if(get_field('article_twitter_widget')): ?>
 			<h3>会話</h3>
-			<?php the_field('article_twitter_widget'); ?>
+			<div class="iframe-cont">
+				<?php the_field('article_twitter_widget'); ?>
+			</div>
 		<?php endif;?>
 
 		<?php get_template_part ( 'template-parts/content-social', 'none' );?>

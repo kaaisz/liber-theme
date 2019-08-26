@@ -159,6 +159,13 @@ a {
   }
 }
 
+.iframe-cont {
+  width: 280px;
+  @include common-height;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 #wpadminbar {
   writing-mode: horizontal-tb;
 }

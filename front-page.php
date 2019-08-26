@@ -75,9 +75,9 @@
       <?php get_template_part ('template-parts/content-social', 'none');?>
       <div class="share">
         <h3>Twitter</h3>
-        <div class="iframe__cont">
-          <a class="twitter-timeline" data-width="230" data-height="100%" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+        <!-- <div class="iframe-cont"> -->
+          <a class="twitter-timeline" data-width="280" data-height="100%" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- </div> -->
     </section>
   </main><!-- #main -->
 </div><!-- #primary -->
