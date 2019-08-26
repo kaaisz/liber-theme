@@ -1,4 +1,16 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500,600,700,900&display=swap");
 @font-face {
   font-family: 'Yu Mincho', 'Yumincho';
   src: url("../woff/yumin.woff") format("woff"); }
@@ -762,7 +774,8 @@ a {
   min-height: 380px;
   height: calc(var(--vh, 1vh) * 82.5);
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
   @media (min-width: 768px) {
     .iframe-cont {
       max-height: 480px; } }

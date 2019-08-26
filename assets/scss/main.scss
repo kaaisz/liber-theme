@@ -164,6 +164,7 @@ a {
   @include common-height;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #wpadminbar {
