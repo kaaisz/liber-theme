@@ -2,3 +2,5 @@ node_modules/
 yarn-error.log
 .htaccess
 .htpasswd
+
+assets/css/
