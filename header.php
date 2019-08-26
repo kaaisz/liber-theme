@@ -89,9 +89,9 @@
 </header><!-- #masthead -->
 
 <div id="page" class="site">
-<div class="site-title_wrap">
-	<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-</div>
+	<div class="site-title_wrap">
+		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+	</div>
 <?php	endif; ?>
 	
 

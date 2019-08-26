@@ -33,46 +33,12 @@ window.onload = function () {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   })
 
-  // control position for scroll indicator
-  const scrollIndicator = document.querySelector('.intro__scroll');
-  const trigger = document.querySelector('.indicator-trigger');
-  const edgeOfIntro = trigger.offsetWidth;
-
-  function hideIndicator() {
-    // debug
-    console.log(edgeOfIntro, window.scrollX);
-    // when scroll indicator has reached to section class = main
-    if (-(window.scrollX) >= edgeOfIntro) {
-      // hide scroll indicator
-      // debug
-      // console.log('hide indicator');
-      scrollIndicator.style.opacity = '0';
-    } else {
-      scrollIndicator.style.opacity = '1';
-    }
-  }
-  
-  // console will change while scroll is active
-  window.addEventListener('scroll', hideIndicator);
-
-  // to fix scroll indicator position
-  // window.addEventListener('scroll', function() {
-  //   scrollIndicator.style.transform = 'translateX(' + window.scrollX + 'px)';
-  // });
-
   // hamburger menu
   const body = document.querySelector('body');
   const hamburger = document.querySelector('.nav__toggle');
   const content = document.querySelector('#content');
   const drawer = document.querySelector('.nav__drawer');
   const overlay = document.querySelector('.nav__overlay');
-
-  // prevent enable vertical scroll
-  const scrollOff = function (e) {
-    e.preventDefault();
-  }
-  document.body.addEventListener('touchmove', scrollOff, false);
-  // document.body.removeEventListener('touchmove', scrollOff, false);
 
   hamburger.addEventListener('click', function (e){
     // fixed background when overlay is enable
@@ -98,4 +64,33 @@ window.onload = function () {
     body.style.overflowX = 'scroll';
     e.preventDefault();
   });
+
+  // control position for scroll indicator
+  const scrollIndicator = document.querySelector('.intro__scroll');
+  const trigger = document.querySelector('.indicator-trigger');
+  const edgeOfIntro = trigger.offsetWidth;
+
+  function hideIndicator() {
+    // debug
+    console.log(edgeOfIntro, window.scrollX);
+    // when scroll indicator has reached to section class = main
+    if (-(window.scrollX) >= edgeOfIntro) {
+      // hide scroll indicator
+      // debug
+      // console.log('hide indicator');
+      scrollIndicator.style.opacity = '0';
+    } else {
+      scrollIndicator.style.opacity = '1';
+    }
+  }
+  
+  // console will change while scroll is active
+  window.addEventListener('scroll', hideIndicator);
+
+  // prevent enable vertical scroll
+  // const scrollOff = function (e) {
+  //   e.preventDefault();
+  // }
+  // document.body.addEventListener('touchmove', scrollOff, false);
+  // document.body.removeEventListener('touchmove', scrollOff, false);
 }
