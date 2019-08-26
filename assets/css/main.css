@@ -268,7 +268,7 @@
   width: calc(100vw - 50px);
   height: 100%;
   min-height: 380px;
-  height: calc(var(--vh, 1vh) * 82.5); }
+  height: calc(var(--vh, 1vh) * 90); }
   @media (min-width: 768px) {
     .intro {
       width: calc(100vw - 50px); } }
@@ -534,7 +534,7 @@
 .entry-content {
   height: 100%;
   min-height: 380px;
-  height: calc(var(--vh, 1vh) * 82.5);
+  height: calc(var(--vh, 1vh) * 90);
   margin: 0 6rem; }
   @media (min-width: 768px) {
     .entry-content {
@@ -555,7 +555,8 @@
     margin: 0;
     padding: 0 2rem 0 1rem; }
   .entry-content p {
-    text-indent: 1rem; }
+    text-indent: 1rem;
+    margin: 0; }
     .entry-content p strong span {
       text-indent: 0;
       color: #222;
@@ -688,7 +689,7 @@ a {
   .site-main {
     height: 100%;
     min-height: 380px;
-    height: calc(var(--vh, 1vh) * 82.5); }
+    height: calc(var(--vh, 1vh) * 90); }
     @media (min-width: 768px) {
       .site-main {
         max-height: 480px; } }
@@ -699,7 +700,7 @@ a {
 .content.shelf {
   height: 100%;
   min-height: 380px;
-  height: calc(var(--vh, 1vh) * 82.5); }
+  height: calc(var(--vh, 1vh) * 90); }
   @media (min-width: 768px) {
     .content,
     .content.shelf {
@@ -772,7 +773,7 @@ a {
   width: 280px;
   height: 100%;
   min-height: 380px;
-  height: calc(var(--vh, 1vh) * 82.5);
+  height: calc(var(--vh, 1vh) * 90);
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
@@ -788,7 +789,7 @@ a {
 .not-found {
   height: 100%;
   min-height: 380px;
-  height: calc(var(--vh, 1vh) * 82.5);
+  height: calc(var(--vh, 1vh) * 90);
   margin: 0 6rem; }
   @media (min-width: 768px) {
     .not-found {
