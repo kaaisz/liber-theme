@@ -166,24 +166,25 @@
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    width: 100vw;
+    width: 0;
     opacity: 0;
     height: 100%;
     top: 0;
     right: -10%;
     writing-mode: vertical-rl;
     transition: all 0.2s ease;
+    z-index: -1;
 
     & ul li{
       display: none;
     }
 
     @include lg {
-      width: 30vw;
       transition: all 0.2s ease;
     }
 
     &.open {
+      width: 100vw;
       opacity: 1;
       background: $color-bg-header;
       right: 0;
@@ -195,6 +196,7 @@
       }
 
       @include lg {
+        width: 30vw;
         transition: all 0.3s ease;
       }
     }
