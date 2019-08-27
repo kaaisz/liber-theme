@@ -31,6 +31,13 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
+// get entire width
+let vw = document.querySelector('.site').clientWidth + 1000;
+console.log('window width: ', vw);
+// set position from body width and top: 0
+document.body.onload = window.scroll(vw, 0);
+
+
 // hamburger menu
 const body = document.querySelector('body');
 const hamburger = document.querySelector('.nav__toggle');
@@ -63,14 +70,16 @@ overlay.addEventListener('click', function(){
   e.preventDefault();
 });
 
-// // control position for scroll indicator
-// const scrollIndicator = document.querySelector('.intro__scroll');
-// const trigger = document.querySelector('.indicator-trigger');
-// const edgeOfIntro = trigger.offsetWidth;
+// control position for scroll indicator
+const scrollIndicator = document.querySelector('.intro__scroll');
+const trigger = document.querySelector('.indicator-trigger');
+const edgeOfIntro = trigger.offsetWidth;
 
 // function hideIndicator() {
-//   // debug
-//   console.log(edgeOfIntro, window.scrollX);
+  // debug
+  window.addEventListener('scroll', function() {
+    console.log('edgeOfIntro: ', edgeOfIntro, 'window.scrollX: ', window.scrollX);
+  });
 //   // when scroll indicator has reached to section class = main
 //   if (-(window.scrollX) >= edgeOfIntro) {
 //     // hide scroll indicator
