@@ -62,7 +62,7 @@
 		// ) );
 		?>
 		<?php if(get_field('article_twitter_widget')): ?>
-			<h3>会話</h3>
+			<h3>Twitter</h3>
 			<div class="iframe-cont">
 				<?php the_field('article_twitter_widget'); ?>
 			</div>
