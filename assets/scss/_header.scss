@@ -162,29 +162,40 @@
   }
 
   &__drawer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    opacity: 0;
+    height: 100%;
+    top: 0;
+    right: -10%;
     writing-mode: vertical-rl;
-    transform: translateX(100%);
-    transition: all .4s ease;
+    transition: all 0.2s ease;
+
+    & ul li{
+      display: none;
+    }
+
+    @include lg {
+      width: 30vw;
+      transition: all 0.2s ease;
+    }
 
     &.open {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100vw;
-      height: 100%;
+      opacity: 1;
       background: $color-bg-header;
-      transform: translateX(0);
-      transition: all .4s ease;
+      right: 0;
+      transition: all 0.2s ease;
       z-index: 3;
 
+      & ul li {
+        display: block;
+      }
+
       @include lg {
-        width: 30vw;
-        height: 100%;
-        padding-right: 65px;
+        transition: all 0.3s ease;
       }
     }
   }
