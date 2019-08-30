@@ -35,7 +35,9 @@ window.addEventListener('resize', () => {
 let vw = document.querySelector('.site').clientWidth + 1000;
 console.log('window width: ', vw);
 // set position from body width and top: 0
-document.body.onload = window.scroll(vw, 0);
+document.body.onload = () => {
+  window.scroll(vw, 0);
+}
 
 
 // hamburger menu
