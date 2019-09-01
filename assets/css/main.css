@@ -621,8 +621,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #313131;
-  overflow-x: scroll;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  scrollbar-color: #656565 #313131; }
 
 ::-webkit-scrollbar {
   height: 6px;

@@ -23,8 +23,11 @@ body {
   // writing-mode: vertical-rl;
   // @include writing-mode(rl);
   // @include font-feature-settings('palt');
-  overflow-x: scroll;
+
+  // TODO: needs to check
+  // overflow-x: scroll;
   overflow-y: hidden;
+  scrollbar-color: #656565 $color-bg;
 }
 
 ::-webkit-scrollbar {
