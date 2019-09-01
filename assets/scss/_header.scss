@@ -78,7 +78,7 @@
     align-items: center;
     width: $header-width-sm;
     height: $header-width-sm;
-    background: $color-bg-header;
+    background: transparent;
     z-index: 4;
 
     @include md {
