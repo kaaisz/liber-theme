@@ -30,10 +30,10 @@ body {
   -webkit-overflow-scrolling: touch; 
   scrollbar-color: #656565 $color-bg;
 
-  & > * {
-    -webkit-transform: translateZ(0px);
-    transform: translateZ(0);
-  }
+  // & > * {
+  //   -webkit-transform: translateZ(0px);
+  //   transform: translateZ(0);
+  // }
 }
 
 ::-webkit-scrollbar {
