@@ -544,10 +544,13 @@
   height: 100%;
   min-height: 380px;
   height: calc(var(--vh, 1vh) * 90);
-  margin: 0 6rem; }
+  margin: 2rem 6rem 1rem; }
   @media (min-width: 768px) {
     .entry-content {
       max-height: 480px; } }
+  @media (min-width: 768px) {
+    .entry-content {
+      margin: 0; } }
   @media (min-width: 992px) {
     .entry-content {
       max-height: 480px; } }
