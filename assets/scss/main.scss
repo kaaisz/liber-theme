@@ -27,7 +27,13 @@ body {
   // TODO: needs to check
   // overflow-x: scroll;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; 
   scrollbar-color: #656565 $color-bg;
+
+  & > * {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0);
+  }
 }
 
 ::-webkit-scrollbar {

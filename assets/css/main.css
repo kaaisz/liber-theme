@@ -625,6 +625,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #313131;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   scrollbar-color: #656565 #313131; }
 
 ::-webkit-scrollbar {
