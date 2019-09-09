@@ -646,7 +646,8 @@ p {
   line-height: 1.75; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
 
 .site {
   display: block;
