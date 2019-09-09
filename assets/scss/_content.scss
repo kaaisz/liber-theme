@@ -17,7 +17,6 @@
         width: 40vw;
         height: calc(var(--vh, 1vh) * 100);
         max-height: 100vh;
-        // margin: 0 55px 0 0;
         }
     }
 
@@ -30,7 +29,6 @@
         right: 0;
         width: calc(100% - 50px);
         height: 100%;
-        // margin: 0 50px 0 0;
         padding: calc(0.75rem + 2rem + 20px) 90px;
 
         @include lg {
@@ -38,7 +36,6 @@
         height: calc(var(--vh, 1vh) * 100);
         max-height: 100vh;
         padding: calc(1.25rem + 2rem + 20px) 0;
-        // margin: 0 65px 0 0;
         }
 
         &_main,
@@ -61,6 +58,31 @@
             @include lg {
                 font-size: 18px;
             }
+        }
+    }
+    &__note {
+        height: 97%;
+        margin: 0 2rem !important;
+        padding: .85rem .5rem;
+        background: #999;
+        color: $color-bg;
+        font-size: 14px;
+        font-weight: $semibold;
+
+        @include lg {
+            height: 100%;
+        }
+
+        & span {
+            color: $color-bg;
+            font-weight: $semibold;
+        }
+
+        &_caller {
+            text-indent: 0;
+            color: $color-bg;
+            background: #999;
+            font-weight: $semibold;
         }
     }
 }
@@ -105,12 +127,6 @@
         p {
             text-indent: 1rem;
             margin: 0;
-
-            & strong span {
-                text-indent: 0;
-                color: $color-cover;
-                background: $color-span-bg;
-            }
         }
 
         li {
@@ -119,4 +135,3 @@
         }
     }
 }
-  

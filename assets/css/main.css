@@ -464,6 +464,41 @@
   font-family: 'Yu Mincho', 'Yumincho';
   src: url("../woff/yumin.woff") format("woff"); }
 
+.entry-header {
+  position: relative; }
+
+.entry-content {
+  height: 100%;
+  min-height: 380px;
+  height: calc(var(--vh, 1vh) * 90);
+  margin: 2rem 6rem 1rem; }
+  @media (min-width: 768px) {
+    .entry-content {
+      max-height: 480px; } }
+  @media (min-width: 768px) {
+    .entry-content {
+      margin: 0; } }
+  @media (min-width: 992px) {
+    .entry-content {
+      max-height: 480px; } }
+  .entry-content h2 {
+    margin: 0;
+    padding: 0 16rem 0 12rem; }
+  .entry-content h3 {
+    margin: 0;
+    padding: 0 4rem 0 1.75rem; }
+  .entry-content h4 {
+    margin: 0;
+    padding: 0 3rem 0 1.5rem; }
+  .entry-content h5 {
+    margin: 0;
+    padding: 0 2rem 0 1rem; }
+  .entry-content p {
+    text-indent: 1rem;
+    margin: 0; }
+  .entry-content li {
+    line-height: 1.5; }
+
 .article-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -524,45 +559,25 @@
       @media (min-width: 992px) {
         .article-page__title_subs {
           font-size: 18px; } }
-
-.entry-header {
-  position: relative; }
-
-.entry-content {
-  height: 100%;
-  min-height: 380px;
-  height: calc(var(--vh, 1vh) * 90);
-  margin: 2rem 6rem 1rem; }
-  @media (min-width: 768px) {
-    .entry-content {
-      max-height: 480px; } }
-  @media (min-width: 768px) {
-    .entry-content {
-      margin: 0; } }
-  @media (min-width: 992px) {
-    .entry-content {
-      max-height: 480px; } }
-  .entry-content h2 {
-    margin: 0;
-    padding: 0 16rem 0 12rem; }
-  .entry-content h3 {
-    margin: 0;
-    padding: 0 4rem 0 1.75rem; }
-  .entry-content h4 {
-    margin: 0;
-    padding: 0 3rem 0 1.5rem; }
-  .entry-content h5 {
-    margin: 0;
-    padding: 0 2rem 0 1rem; }
-  .entry-content p {
-    text-indent: 1rem;
-    margin: 0; }
-    .entry-content p strong span {
+  .article-page__note {
+    height: 97%;
+    margin: 0 2rem !important;
+    padding: .85rem .5rem;
+    background: #999;
+    color: #313131;
+    font-size: 14px;
+    font-weight: 600; }
+    @media (min-width: 992px) {
+      .article-page__note {
+        height: 100%; } }
+    .article-page__note span {
+      color: #313131;
+      font-weight: 600; }
+    .article-page__note_caller {
       text-indent: 0;
-      color: #222;
-      background: rgba(255, 255, 255, 0.8); }
-  .entry-content li {
-    line-height: 1.5; }
+      color: #313131;
+      background: #999;
+      font-weight: 600; }
 
 @font-face {
   font-family: 'Yu Mincho', 'Yumincho';
