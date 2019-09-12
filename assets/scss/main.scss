@@ -151,6 +151,10 @@ a {
     border: 1px solid $color-type;
     transition: all .3s ease;
 
+    .twitter-share-button {
+      display: none;
+    }
+
     svg {
       fill: $color-type;
       width: 80%;
