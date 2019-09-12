@@ -60,30 +60,32 @@
             }
         }
     }
-    &__note {
-        height: 97%;
-        margin: 0 2rem !important;
-        padding: .85rem .5rem;
-        background: #999;
-        color: $color-bg;
-        font-size: 14px;
+}
+
+.note {
+    height: 97%;
+    margin: 0 2rem !important;
+    padding: .85rem .5rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: $color-type;
+    font-size: 14px;
+    font-weight: $semibold;
+
+    @include lg {
+        height: 100%;
+    }
+
+    & span {
+        color: $color-type;
         font-weight: $semibold;
+    }
 
-        @include lg {
-            height: 100%;
-        }
-
-        & span {
-            color: $color-bg;
-            font-weight: $semibold;
-        }
-
-        &_caller {
-            text-indent: 0;
-            color: $color-bg;
-            background: #999;
-            font-weight: $semibold;
-        }
+    &_caller {
+        text-indent: 0;
+        color: $color-type;
+        font-weight: $semibold;
+        border-right: 1px solid rgba(255, 255, 255, 0.8);
     }
 }
 
