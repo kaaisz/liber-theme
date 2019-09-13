@@ -187,6 +187,11 @@ a {
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  
+  &.noscroll {
+    overflow-y: hidden;
+    overflow: hidden;
+  }
 }
 
 #wpadminbar {
