@@ -76,11 +76,11 @@
       <div class="share">
         <h3>Twitter</h3>
         
-        <a class="twitter-timeline" data-width="280" data-height="100%" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-       
+        <a class="twitter-timeline" data-width="280" data-height="100%" href="https://twitter.com/liber_community?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
         <h3>Facebook</h3>
         <div class="iframe-cont noscroll">
-          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="280" data-height="1000" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+          <div class="fb-page" data-href="https://www.facebook.com/liber.community0/" data-tabs="timeline" data-width="280" data-height="1000" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/liber.community0/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/liber.community0/">Facebook</a></blockquote></div>
         </div>
     </section>
   </main><!-- #main -->
