@@ -82,10 +82,12 @@
     }
 
     &_caller {
-        text-indent: 0;
-        color: $color-type;
-        font-weight: $semibold;line-height: $header-width-sm;
+        padding: 0 2px 0 0;
         border-right: 1px solid rgba(255, 255, 255, 0.8);
+        color: $color-type;
+        font-weight: $semibold;
+        line-height: 1.5;
+        text-indent: 0;
     }
 }
 
@@ -144,7 +146,7 @@
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 20px;
 
                 @include lg {
                     margin: 0 4rem;
