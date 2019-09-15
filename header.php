@@ -32,6 +32,12 @@
 	<?php endif; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<?php
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+		$browser = (strpos($ua,'Android') !== false); ?>
+	<?php	if($browser == true): ?>	
+		<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+	<?php endif; ?>
 	<link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/main.css" />
 	<?php wp_head(); ?>
 </head>
