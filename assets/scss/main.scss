@@ -304,3 +304,29 @@ a {
     }
   }
 }
+
+.search {
+
+  &-field {
+    width: 12rem;
+    height: 2rem;
+    padding: 0 1rem;
+    border: 1px solid white;
+    background: transparent;
+    box-shadow: none;
+    transform: rotate(90deg) translate(50%, 0);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  
+  &-submit {
+    height: 2rem;
+    padding: 0 1rem;
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+    transform: rotate(90deg) translate(360%, 0);
+  }
+}
