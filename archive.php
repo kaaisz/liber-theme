@@ -11,7 +11,7 @@
 <!-- 裏表紙 -->
 
 <!-- invoke scroll indicator -->
-<?php get_template_part( 'template-parts/intro-scroll-indicator', 'none' )?>
+<?php //get_template_part( 'template-parts/intro-scroll-indicator', 'none' )?>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main">

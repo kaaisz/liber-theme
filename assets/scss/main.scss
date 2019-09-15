@@ -90,6 +90,86 @@ a {
   overflow-x: scroll;
   overflow-y: hidden;
 
+  &-header {
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   display: flex;
+  //   align-items: center;
+  //   width: 100%;
+  //   height: $header-width-sm;
+  //   background: transparent;
+  //   color: $color-type;
+  //   z-index: 1;
+
+  //   @include md {
+  //     height: $header-width-md;
+  //   }
+
+  //   @include lg {
+  //     height: $header-width-lg;
+  //   }
+
+  //   @include xl {
+  //     height: $header-width-xl;
+  //   }
+  }
+
+  &-branding {
+    height: 100%;
+    width: 0;
+  }
+
+  &-title_wrap {
+    display: block;
+    line-height: $header-width-sm;
+    width: $header-width-sm;
+    height: 100%;
+    padding: $header-width-sm 0 0 0;
+    background: $color-bg-header;
+    font-weight: $semibold;
+
+    @include md {
+      width: $header-width-md;
+      padding: $header-width-md 0 0 0;
+      line-height: $header-width-md;
+    }
+
+    @include lg {
+      width: $header-width-lg;
+      padding: $header-width-lg 0 0 0;
+      line-height: $header-width-lg;
+    }
+
+    @include xl {
+      width: $header-width-xl;
+      padding: $header-width-xl 0 0 0;
+      line-height: $header-width-lg;
+    }
+  }
+
+  &-title {
+    margin: 0;
+    font-size: 22px;
+    margin: 0;
+    font-weight: $semibold;
+    line-height: $header-width-sm;
+
+    @include md {
+      width: 100%;
+      line-height: $header-width-md;
+    }
+
+    @include lg {
+      font-size: 28px;
+      line-height: $header-width-lg;
+    }
+
+    @include xl {
+      line-height: $header-width-lg;
+    }
+  }
+
   &-content {
     min-width: 100vw;
     display: flex;

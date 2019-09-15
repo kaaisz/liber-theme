@@ -72,9 +72,9 @@ overlay.addEventListener('click', function(){
 });
 
 // control position for scroll indicator
-const scrollIndicator = document.querySelector('.intro__scroll');
-const trigger = document.querySelector('.indicator-trigger');
-const edgeOfIntro = trigger.offsetWidth;
+// const scrollIndicator = document.querySelector('.intro__scroll');
+// const trigger = document.querySelector('.indicator-trigger');
+// const edgeOfIntro = trigger.offsetWidth;
 
 // function hideIndicator() {
   // debug

@@ -2,16 +2,33 @@
 @import "mixins";
 
 .intro {
-  display: flex;
-  align-items: center;
+  display: block;
   @include intro-width(50px);
   @include common-height;
 
-  &.main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
   }
+
+  &__content-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: max-content;
+    /* height: 100%; */
+    margin: auto;
+  }
+
+//   &.main {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
 
   &__text {
     color: #fff;
@@ -30,62 +47,62 @@
     }
   }
 
-  &__scroll {
-    position: fixed;
-    bottom: 0;
-    right: 48vw;
-    -webkit-transition: opacity .3s linear;
-    transition: opacity .3s linear;
-    margin: 0 0 20px;
-    transform: translate3d(0, 0, 0);
-    transform: translateZ(1px);
-    white-space: nowrap;
+//   &__scroll {
+//     position: fixed;
+//     bottom: 0;
+//     right: 48vw;
+//     -webkit-transition: opacity .3s linear;
+//     transition: opacity .3s linear;
+//     margin: 0 0 20px;
+//     transform: translate3d(0, 0, 0);
+//     transform: translateZ(1px);
+//     white-space: nowrap;
 
-    &-text {
-      position: relative;
-      margin: 0;
-      font-size: 12px;
-      writing-mode: horizontal-tb;
-    }
+//     &-text {
+//       position: relative;
+//       margin: 0;
+//       font-size: 12px;
+//       writing-mode: horizontal-tb;
+//     }
 
-    &-bar {
-      position: absolute;
-      top: 5px;
-      left: -30px;
-      width: 8px;
-      height: 8px;
-      margin-left: 15px;
-      border-top: 1px solid $color-type;
-      border-left: 1px solid $color-type;
-      transform: rotateZ(-45deg);
-      animation: scroll 2s infinite;
-      opacity: 0;
+//     &-bar {
+//       position: absolute;
+//       top: 5px;
+//       left: -30px;
+//       width: 8px;
+//       height: 8px;
+//       margin-left: 15px;
+//       border-top: 1px solid $color-type;
+//       border-left: 1px solid $color-type;
+//       transform: rotateZ(-45deg);
+//       animation: scroll 2s infinite;
+//       opacity: 0;
 
-      &:nth-of-type(2) {
-        left: -40px;
-        animation-delay: .15s;
-      }
+//       &:nth-of-type(2) {
+//         left: -40px;
+//         animation-delay: .15s;
+//       }
 
-      &:nth-of-type(3) {
-        left: -50px;
-        animation-delay: .3s;
-      }
-    }
+//       &:nth-of-type(3) {
+//         left: -50px;
+//         animation-delay: .3s;
+//       }
+//     }
 
-    @keyframes scroll {
-      0% {
-        opacity: 0;
-      }
+//     @keyframes scroll {
+//       0% {
+//         opacity: 0;
+//       }
 
-      50% {
-        opacity: 1;
-      }
+//       50% {
+//         opacity: 1;
+//       }
 
-      100% {
-        opacity: 0;
-      }
-    }
-  }
+//       100% {
+//         opacity: 0;
+//       }
+//     }
+//   }
 }
 
 .article {
@@ -124,7 +141,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    box-shadow: 0 10px 20px #252525;
+    box-shadow: 0 10px 15px rgba(15, 15, 15, 0.5);
     transition: all .2s linear;
 
     &:hover {

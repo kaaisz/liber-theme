@@ -18,7 +18,7 @@
 			<p class="copyright"><?php echo date(Y);?> &copy; Timelag.ltd All rights reserved.</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- #page @header.php -->
 
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/main.js"></script>

@@ -84,7 +84,7 @@
     &_caller {
         text-indent: 0;
         color: $color-type;
-        font-weight: $semibold;
+        font-weight: $semibold;line-height: $header-width-sm;
         border-right: 1px solid rgba(255, 255, 255, 0.8);
     }
 }
