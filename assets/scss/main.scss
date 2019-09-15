@@ -306,6 +306,10 @@ a {
 }
 
 .search {
+  &-form {
+    display: flex;
+    align-items: center;
+  }
 
   &-field {
     width: 12rem;
@@ -315,6 +319,7 @@ a {
     background: transparent;
     box-shadow: none;
     transform: rotate(90deg) translate(50%, 0);
+    -webkit-appearance: none;
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.6);
