@@ -135,5 +135,26 @@
             // resolve for firefox line-height
             line-height: 1.5;
         }
+
+        &.page {
+            margin: 0 4rem 0 8rem;
+            
+            @include lg {
+                margin: 0.75rem 8rem;
+            }
+
+            h1 {
+                font-size: 28px;
+
+                @include lg {
+                    margin: 0 4rem;
+                }
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0 5rem;
+            }
+        }
     }
 }
