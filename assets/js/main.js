@@ -1,22 +1,6 @@
 'use strict';
 
 // console.log('userAgent', navigator.userAgent);
-// let width = 0, height = 0;
-// if( typeof( window.innerWidth ) == 'number' ) {
-//   // if not IE
-//   width = window.innerWidth;
-//   height = window.innerHeight;
-// } else if ( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-//   // IE6+
-//   width = document.documentElement.clientWidth;
-//   height = document.documentElement.clientHeight;
-// } else if ( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-//   width = document.body.clientWidth;
-//   height = document.body.clientHeight;
-// }
-
-// console.log('width', width);
-// console.log('height', height);
 
 // get viewport height and multiple it by 1% to get a value for vh unit
 let vh = window.innerHeight * 0.01;
@@ -30,14 +14,6 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
-
-// get entire width
-// let vw = document.querySelector('.site').clientWidth + 1000;
-// console.log('window width: ', vw);
-// // set position from body width and top: 0
-// document.body.onload = () => {
-//   window.scroll(vw, 0);
-// }
 
 // hamburger menu
 const body = document.querySelector('body');
@@ -77,11 +53,11 @@ overlay.addEventListener('click', function(){
 // const edgeOfIntro = trigger.offsetWidth;
 
 // function hideIndicator() {
-  // debug
-  // window.addEventListener('scroll', function() {
-  //   console.log('edgeOfIntro: ', edgeOfIntro, 'window.scrollX: ', window.scrollX);
-  // });
-//   // when scroll indicator has reached to section class = main
+// // debug
+// window.addEventListener('scroll', function() {
+//   console.log('edgeOfIntro: ', edgeOfIntro, 'window.scrollX: ', window.scrollX);
+// });
+// // when scroll indicator has reached to section class = main
 //   if (-(window.scrollX) >= edgeOfIntro) {
 //     // hide scroll indicator
 //     // debug
@@ -96,8 +72,8 @@ overlay.addEventListener('click', function(){
 // window.addEventListener('scroll', hideIndicator);
 
 // // prevent enable vertical scroll
-// // const scrollOff = function (e) {
-// //   e.preventDefault();
-// // }
-// // document.body.addEventListener('touchmove', scrollOff, false);
-// // document.body.removeEventListener('touchmove', scrollOff, false);
+// const scrollOff = function (e) {
+//   e.preventDefault();
+// }
+// document.body.addEventListener('touchmove', scrollOff, false);
+// document.body.removeEventListener('touchmove', scrollOff, false);
