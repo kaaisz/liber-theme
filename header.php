@@ -13,7 +13,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<?php if ( is_front_page() && is_home() ) :?>
+	<?php if ( is_front_page() && is_home() || is_archive() ) :?>
 		<meta property="og:locale" content="ja_JP" />
 		<meta property="og:site_name" content="リベル" />
 		<meta property="og:url"           content="https://liber.community/" />
@@ -43,36 +43,35 @@
 		the_custom_logo();
 		// if ( is_front_page() && is_home() ) :
 	?>
-	<div id="page" class="site">
-		<header id="masthead" class="header site-header">
-			<div class="site-branding">
-				<nav id="site-navigation" class="nav main-navigation">
-					<div class="nav__fixed">
-						<div id="nav__toggle" class="nav__toggle">
-							<span class="nav__bar"></span>
-							<span class="nav__bar"></span>
-							<span class="nav__bar"></span>
-						</div>
+	<header id="masthead" class="header site-header">
+		<div class="site-branding">
+			<nav id="site-navigation" class="nav main-navigation">
+				<div class="nav__fixed">
+					<div id="nav__toggle" class="nav__toggle">
+						<span class="nav__bar"></span>
+						<span class="nav__bar"></span>
+						<span class="nav__bar"></span>
 					</div>
-				</nav><!-- #site-navigation -->
-				<div class="nav__drawer">
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'menu_class'        => 'nav__menus',
-						) );
-						wp_nav_menu( array(
-							'theme_location' => 'menu-2',
-							'menu_id'        => 'secondary-menu',
-							'menu_class'        => 'nav__menus_footer',
-						) );
-					?>
 				</div>
-				<div class="nav__overlay"></div>
-			</div><!-- .site-branding -->
-		</header><!-- #masthead -->
-
+			</nav><!-- #site-navigation -->
+			<div class="nav__drawer">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class'        => 'nav__menus',
+					) );
+					wp_nav_menu( array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'secondary-menu',
+						'menu_class'        => 'nav__menus_footer',
+					) );
+				?>
+			</div>
+			<div class="nav__overlay"></div>
+		</div><!-- .site-branding -->
+	</header><!-- #masthead -->
+	<div id="page" class="site">
 		<div class="site-title_wrap">
 			<?php	if ( is_front_page() && is_home() ) :?>
 				<h1 class="site-title">

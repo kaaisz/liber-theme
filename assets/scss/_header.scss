@@ -4,28 +4,28 @@
 // wordpress website common content
 .site {
   &-header {
-    //   position: fixed;
-    //   top: 0;
-    //   right: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
     //   display: flex;
     //   align-items: center;
-    //   width: 100%;
-    //   height: $header-width-sm;
-    //   background: transparent;
-    //   color: $color-type;
-    //   z-index: 1;
+      width: 100%;
+      height: $header-width-sm;
+      background: transparent;
+      color: $color-type;
+      z-index: 1;
   
-    //   @include md {
-    //     height: $header-width-md;
-    //   }
+      @include md {
+        height: $header-width-md;
+      }
   
-    //   @include lg {
-    //     height: $header-width-lg;
-    //   }
+      @include lg {
+        height: $header-width-lg;
+      }
   
-    //   @include xl {
-    //     height: $header-width-xl;
-    //   }
+      @include xl {
+        height: $header-width-xl;
+      }
   }
 
   &-branding {
