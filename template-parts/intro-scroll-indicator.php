@@ -9,13 +9,15 @@
 
 ?>
 
-<div class="intro__scroll">
+<div class="indicator">
   <?php if (ua_smartphone() == true): ?>
-    <p class="intro__scroll-text">Scroll to left</p>
+    <p class="indicator__text">Scroll to left</p>
   <?php else: ?>
-    <p class="intro__scroll-text">Scroll to left</p>
+    <p class="indicator__text">Scroll to left</p>
   <?php endif;?>
-  <span class="intro__scroll-bar"></span>
-  <span class="intro__scroll-bar"></span>
-  <span class="intro__scroll-bar"></span>
+  <div class="indicator__bars">
+    <span class="indicator__bar"></span>
+    <span class="indicator__bar"></span>
+    <span class="indicator__bar"></span>
+  </div>
 </div>

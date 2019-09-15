@@ -246,3 +246,61 @@ a {
   @include common-height;
   margin: 0 6rem;
 }
+
+.indicator {
+  position: fixed;
+  top: 92%;
+  right: 50%;
+  height: 30px;
+  transform: translateX(50%);
+
+  &__text {
+    position: relative;
+    margin: 0;
+    font-size: 12px;
+    writing-mode: horizontal-tb;
+    line-height: 30px;
+  }
+
+  &__bars {
+    position: absolute;
+    width: auto;
+    bottom: 19px;
+  }
+
+  &__bar {
+    position: absolute;
+    left: -30px;
+    width: 8px;
+    height: 8px;
+    margin-left: 15px;
+    border-top: 1px solid $color-type;
+    border-left: 1px solid $color-type;
+    transform: rotateZ(-45deg);
+    animation: scroll 2s infinite;
+
+    &:nth-of-type(2) {
+      left: -40px;
+      animation-delay: .15s;
+    }
+
+    &:nth-of-type(3) {
+      left: -50px;
+      animation-delay: .3s;
+    }
+
+    @keyframes scroll {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}

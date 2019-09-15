@@ -46,63 +46,6 @@
       font-size: 18px;
     }
   }
-
-//   &__scroll {
-//     position: fixed;
-//     bottom: 0;
-//     right: 48vw;
-//     -webkit-transition: opacity .3s linear;
-//     transition: opacity .3s linear;
-//     margin: 0 0 20px;
-//     transform: translate3d(0, 0, 0);
-//     transform: translateZ(1px);
-//     white-space: nowrap;
-
-//     &-text {
-//       position: relative;
-//       margin: 0;
-//       font-size: 12px;
-//       writing-mode: horizontal-tb;
-//     }
-
-//     &-bar {
-//       position: absolute;
-//       top: 5px;
-//       left: -30px;
-//       width: 8px;
-//       height: 8px;
-//       margin-left: 15px;
-//       border-top: 1px solid $color-type;
-//       border-left: 1px solid $color-type;
-//       transform: rotateZ(-45deg);
-//       animation: scroll 2s infinite;
-//       opacity: 0;
-
-//       &:nth-of-type(2) {
-//         left: -40px;
-//         animation-delay: .15s;
-//       }
-
-//       &:nth-of-type(3) {
-//         left: -50px;
-//         animation-delay: .3s;
-//       }
-//     }
-
-//     @keyframes scroll {
-//       0% {
-//         opacity: 0;
-//       }
-
-//       50% {
-//         opacity: 1;
-//       }
-
-//       100% {
-//         opacity: 0;
-//       }
-//     }
-//   }
 }
 
 .article {
