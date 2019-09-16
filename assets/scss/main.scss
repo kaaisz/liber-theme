@@ -253,6 +253,9 @@ a {
   right: 50%;
   height: 30px;
   transform: translateX(50%);
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  white-space: nowrap;
 
   &__text {
     position: relative;

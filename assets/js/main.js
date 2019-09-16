@@ -4,10 +4,8 @@
 
 // get viewport height and multiple it by 1% to get a value for vh unit
 let vh = window.innerHeight * 0.01;
-
 // set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-
 // listen to the resize event
 window.addEventListener('resize', () => {
   // apply same action above
@@ -24,7 +22,7 @@ const overlay = document.querySelector('.nav__overlay');
 
 hamburger.addEventListener('click', function (e){
   // fixed background when overlay is enable
-
+  e.preventDefault();
   if(body.style.overflowX == 'hidden') {
     body.style.overflowX = 'scroll';
   } else {
@@ -48,28 +46,28 @@ overlay.addEventListener('click', function(){
 });
 
 // control position for scroll indicator
-// const scrollIndicator = document.querySelector('.intro__scroll');
-// const trigger = document.querySelector('.indicator-trigger');
-// const edgeOfIntro = trigger.offsetWidth;
+const scrollIndicator = document.querySelector('.indicator');
+var target = document.querySelector('.site');
+const trigger = document.querySelector('.indicator-trigger');
+const edgeOfIntro = trigger.offsetWidth;
 
-// function hideIndicator() {
-// // debug
-// window.addEventListener('scroll', function() {
-//   console.log('edgeOfIntro: ', edgeOfIntro, 'window.scrollX: ', window.scrollX);
-// });
-// // when scroll indicator has reached to section class = main
-//   if (-(window.scrollX) >= edgeOfIntro) {
-//     // hide scroll indicator
-//     // debug
-//     // console.log('hide indicator');
-//     scrollIndicator.style.opacity = '0';
-//   } else {
-//     scrollIndicator.style.opacity = '1';
-//   }
-// }
+function hideIndicator() {
+  // debug
+  console.log('edgeOfIntro: ', edgeOfIntro, 'scroll: ', target.scrollLeft);
+  console.log('rest of scroll until edge: ', (target.scrollLeft - edgeOfIntro));
+  // when scroll indicator has reached to section class = main
+  if (edgeOfIntro >= (target.scrollLeft - edgeOfIntro)) {
+    // hide scroll indicator
+    // debug
+    console.log('hide indicator');
+    scrollIndicator.style.opacity = '0';
+    // } else {
+    // scrollIndicator.style.opacity = '1';
+  }
+}
 
 // // console will change while scroll is active
-// window.addEventListener('scroll', hideIndicator);
+target.addEventListener('scroll', hideIndicator);
 
 // // prevent enable vertical scroll
 // const scrollOff = function (e) {
