@@ -16,13 +16,11 @@
 	<?php if ( !is_front_page() && is_home() || is_archive() ) :?>
 		<meta property="og:locale" content="ja_JP" />
 		<meta property="og:site_name" content="リベル" />
-		<!-- <meta property="og:url"           content="<?php the_permalink(); ?>" /> -->
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="<?= the_title();?>〜<?= the_field('article_sub_title'); ?>〜 | リベル" />
 	<?php else: ?>
 		<meta property="og:locale" content="ja_JP" />
 		<meta property="og:site_name" content="リベル" />
-		<!-- <meta property="og:url"           content="https://liber.community/" /> -->
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="リベル" />
 	<?php endif; ?>
