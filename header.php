@@ -16,19 +16,15 @@
 	<?php if ( !is_front_page() && is_home() || is_archive() ) :?>
 		<meta property="og:locale" content="ja_JP" />
 		<meta property="og:site_name" content="リベル" />
-		<meta property="og:url"           content="<?php the_permalink(); ?>" />
+		<!-- <meta property="og:url"           content="<?php the_permalink(); ?>" /> -->
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="<?= the_title();?>〜<?= the_field('article_sub_title'); ?>〜 | リベル" />
-		<meta property="og:description"   content="広く深い知の旅へ、いざ。" />
-		<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 	<?php else: ?>
 		<meta property="og:locale" content="ja_JP" />
 		<meta property="og:site_name" content="リベル" />
-		<meta property="og:url"           content="https://liber.community/" />
+		<!-- <meta property="og:url"           content="https://liber.community/" /> -->
 		<meta property="og:type"          content="website" />
 		<meta property="og:title"         content="リベル" />
-		<meta property="og:description"   content="広く深い知の旅へ、いざ。" />
-		<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 	<?php endif; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
