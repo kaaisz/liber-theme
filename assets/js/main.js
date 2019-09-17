@@ -1,6 +1,6 @@
 'use strict';
 
-// console.log('userAgent', navigator.userAgent);
+const userAgent = window.navigator.userAgent.toLowerCase();
 
 // get viewport height and multiple it by 1% to get a value for vh unit
 let vh = window.innerHeight * 0.01;
@@ -35,43 +35,41 @@ hamburger.addEventListener('click', function (e){
   overlay.classList.toggle('active');
 });
 
-overlay.addEventListener('click', function(){
+overlay.addEventListener('click', function(e){
+  e.preventDefault();
   hamburger.classList.remove('active');
   // drawer open
   drawer.classList.remove('open');
   // enable overlay
   overlay.classList.remove('active');
   body.style.overflowX = 'scroll';
-  e.preventDefault();
 });
 
 // control position for scroll indicator
 const scrollIndicator = document.querySelector('.indicator');
 var target = document.querySelector('.site');
 const trigger = document.querySelector('.indicator-trigger');
+const targetWidth = target.scrollLeft;
+const triggerFlag = target.offsetWidth;
 const edgeOfIntro = trigger.offsetWidth;
+const contentLength = parseInt(targetWidth + edgeOfIntro);
 
 function hideIndicator() {
-  // debug
   console.log('edgeOfIntro: ', edgeOfIntro, 'scroll: ', target.scrollLeft);
   console.log('rest of scroll until edge: ', (target.scrollLeft - edgeOfIntro));
   // when scroll indicator has reached to section class = main
-  if (edgeOfIntro >= (target.scrollLeft - edgeOfIntro)) {
+  if (navigator.userAgent == 'iPhone' || 'iPad' || 'iPod touch') {
+    // scrollIndicator.classList.remove('indicator');
+    // scrollIndicator.classList.add('indicator_safari');
+    console.log('From iPhone')
+  }
+  if (target.scrollLeft <= (contentLength - triggerFlag)) {
     // hide scroll indicator
-    // debug
     console.log('hide indicator');
     scrollIndicator.style.opacity = '0';
-    // } else {
-    // scrollIndicator.style.opacity = '1';
   }
 }
 
-// // console will change while scroll is active
+// console will change while scroll is active
 target.addEventListener('scroll', hideIndicator);
 
-// // prevent enable vertical scroll
-// const scrollOff = function (e) {
-//   e.preventDefault();
-// }
-// document.body.addEventListener('touchmove', scrollOff, false);
-// document.body.removeEventListener('touchmove', scrollOff, false);

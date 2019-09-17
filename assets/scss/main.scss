@@ -250,12 +250,34 @@ a {
 .indicator {
   position: fixed;
   top: 92%;
-  right: 50%;
+  right: 45%;
   height: 30px;
-  transform: translateX(50%);
+  transform: translate3d(0, 0, 0);
   -webkit-transition: opacity .3s linear;
   transition: opacity .3s linear;
   white-space: nowrap;
+
+  .indicator_safari {
+    position: absolute;
+    top: 94%;
+    right: 45%;
+    height: 30px;
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    white-space: nowrap;
+    animation: repaint 1ms;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes repaint {
+    from {
+      width: 99.999%;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
   &__text {
     position: relative;

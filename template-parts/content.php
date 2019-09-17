@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-page'); ?>>
 
 	<!-- invoke scroll indicator -->
-	<?php // get_template_part( 'template-parts/intro-scroll-indicator', 'none' )?>
+	<?php get_template_part( 'template-parts/intro-scroll-indicator', 'none' )?>
 
 	<header class="entry-header indicator-trigger">
 		<?php if (has_post_thumbnail()):?>
