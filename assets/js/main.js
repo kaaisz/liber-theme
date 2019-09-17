@@ -55,17 +55,12 @@ const edgeOfIntro = trigger.offsetWidth;
 const contentLength = parseInt(targetWidth + edgeOfIntro);
 
 function hideIndicator() {
-  console.log('edgeOfIntro: ', edgeOfIntro, 'scroll: ', target.scrollLeft);
-  console.log('rest of scroll until edge: ', (target.scrollLeft - edgeOfIntro));
+  // console.log('edgeOfIntro: ', edgeOfIntro, 'scroll: ', target.scrollLeft);
+  // console.log('rest of scroll until edge: ', (target.scrollLeft - edgeOfIntro));
   // when scroll indicator has reached to section class = main
-  if (navigator.userAgent == 'iPhone' || 'iPad' || 'iPod touch') {
-    // scrollIndicator.classList.remove('indicator');
-    // scrollIndicator.classList.add('indicator_safari');
-    console.log('From iPhone')
-  }
   if (target.scrollLeft <= (contentLength - triggerFlag)) {
     // hide scroll indicator
-    console.log('hide indicator');
+    // console.log('hide indicator');
     scrollIndicator.style.opacity = '0';
   }
 }

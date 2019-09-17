@@ -257,6 +257,10 @@ a {
   transition: opacity .3s linear;
   white-space: nowrap;
 
+  @include lg {
+    right: 48%;
+  }
+
   .indicator_safari {
     position: absolute;
     top: 94%;
@@ -268,6 +272,10 @@ a {
     white-space: nowrap;
     animation: repaint 1ms;
     animation-iteration-count: infinite;
+
+    @include lg {
+      right: 48%;
+    }
   }
 
   @keyframes repaint {
