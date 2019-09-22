@@ -46,13 +46,17 @@ overlay.addEventListener('click', function(e){
 });
 
 // control position for scroll indicator
+let target = document.querySelector('.site');
 const scrollIndicator = document.querySelector('.indicator');
-var target = document.querySelector('.site');
 const trigger = document.querySelector('.indicator-trigger');
 const targetWidth = target.scrollLeft;
 const triggerFlag = target.offsetWidth;
 const edgeOfIntro = trigger.offsetWidth;
 const contentLength = parseInt(targetWidth + edgeOfIntro);
+
+target.addEventListener('scroll', function() {
+  hideIndicator();
+});
 
 function hideIndicator() {
   // console.log('edgeOfIntro: ', edgeOfIntro, 'scroll: ', target.scrollLeft);
@@ -64,7 +68,3 @@ function hideIndicator() {
     scrollIndicator.style.opacity = '0';
   }
 }
-
-// console will change while scroll is active
-target.addEventListener('scroll', hideIndicator);
-
