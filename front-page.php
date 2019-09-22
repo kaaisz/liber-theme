@@ -6,7 +6,8 @@
  *
  * @package liber-theme
  */
- get_header();?>
+
+get_header();?>
 <!-- Website toppage - 書架 -->
 
 <!-- invoke scroll indicator -->
@@ -49,7 +50,23 @@
         ?>
           <div class="article">
             <a class="article__container" href=<?php the_permalink();?>>
-              <?php the_post_thumbnail('large', array('class' => 'article__img'));?>
+              <?php 
+                  $thumbnail_id = get_post_thumbnail_id();
+                  $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+                  $srcset = wp_get_attachment_image_srcset( $thumbnail_id, 'full' );
+                  $src = $image[0];
+
+                  if(is_front_page()):
+                      if(!empty($image[0])) :
+              ?>
+                          <img class="article__img lazy" data-src="<?php echo($src); ?>" data-srcset="<?php echo($src_meta); ?>" alt="挿絵：<?php the_title();?>〜<?php the_field('article_sub_title');?>">
+                      <?php else: ?>
+                          <div class="article__img"></div>
+              <?php 
+                      endif; 
+                  endif;
+              ?>
+              <?php //the_post_thumbnail('large', array('class' => 'article__img'));?>
               <div class="article__title ptrn-a">
                 <h3 class="article__title_main"><?php the_title();?></h3>
                 <h4 class="article__title_subs"><?php the_field('article_sub_title');?></h3>

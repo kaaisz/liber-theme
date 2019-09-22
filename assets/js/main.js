@@ -13,6 +13,11 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
+// Apply lazyload
+const lazyLoad = new LazyLoad({
+  elements_selector: ".lazy"
+});
+
 // hamburger menu
 const body = document.querySelector('body');
 const hamburger = document.querySelector('.nav__toggle');
