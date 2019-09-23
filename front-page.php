@@ -53,13 +53,23 @@ get_header();?>
               <?php 
                   $thumbnail_id = get_post_thumbnail_id();
                   $image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-                  $srcset = wp_get_attachment_image_srcset( $thumbnail_id, 'full' );
-                  $src = $image[0];
-
+                  $srcset = wp_get_attachment_image_srcset( $thumbnail_id );
+                  $image_large = wp_get_attachment_image_src( $thumbnail_id, 'large' );
+                  $image_minify = wp_get_attachment_image_src( $thumbnail_id, 'medium' );
+                  $image_min = wp_get_attachment_image_src( $thumbnail_id, 'small' );
+                  $src_full = $image[0];
+                  $src_large = $image_large[0];
+                  $src_minify = $image_minify[0];
                   if(is_front_page()):
                       if(!empty($image[0])) :
-              ?>
-                          <img class="article__img lazy" data-src="<?php echo($src); ?>" data-srcset="<?php echo($src_meta); ?>" alt="挿絵：<?php the_title();?>〜<?php the_field('article_sub_title');?>">
+              ?>          
+                          <picture>
+                            <source media="(min-width: 1000px)" data-srcset="<?php echo($src_full); ?>">
+                            <source media="(min-width: 640px)" data-srcset="<?php echo($src_large)?>">
+                            <!-- <img class="article__img lazy" data-src="<?php // echo($src_full); ?>" data-srcset="<?php // echo($srcset); ?>" alt="挿絵：<?php // the_title();?>〜<?php // the_field('article_sub_title');?>"> -->
+                            <img class="article__img lazy" src="<?php echo($src_minify); ?>" alt="挿絵：<?php the_title();?>〜<?php the_field('article_sub_title');?>">
+                          </picture>
+
                       <?php else: ?>
                           <div class="article__img"></div>
               <?php 
@@ -84,13 +94,13 @@ get_header();?>
       <div class="share">
         <h3>Twitter</h3>
         <div class="share__cont">
-          <a class="twitter-timeline" data-width="280" data-height="100%" href="https://twitter.com/liber_community?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
+          <a class="twitter-timeline lazy" data-width="280" data-height="100%" href="https://twitter.com/liber_community?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         <h3>Facebook</h3>
         <div class="share__cont">
           <div class="iframe-cont noscroll">
-            <div class="fb-page" data-href="https://www.facebook.com/liber.community0/" data-tabs="timeline" data-width="280" data-height="1000" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/liber.community0/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/liber.community0/">Facebook</a></blockquote></div>
+            <div class="fb-page lazy" data-href="https://www.facebook.com/liber.community0/" data-tabs="timeline" data-width="280" data-height="1000" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/liber.community0/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/liber.community0/">Facebook</a></blockquote></div>
           </div>
         </div>
       </div>

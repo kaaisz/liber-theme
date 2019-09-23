@@ -23,7 +23,8 @@
 <?php wp_footer(); ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.10.0/lazyload.min.js"></script>
 <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
-<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/main.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/assets/js/twitter-widget.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/assets/js/main.js"></script>
 <script>
 (function(w, d){
 var b = d.getElementsByTagName('body')[0];
