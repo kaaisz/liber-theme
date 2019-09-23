@@ -33,6 +33,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 	<?php endif; ?>
 	<link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/main.css" />
+	<link rel="shortcut icon" href="<?= get_template_directory_uri(); ?>/assets/img/icon.png">
+	<link rel="apple-touch-icon" href="<?= get_template_directory_uri(); ?>/assets/img/icon-touch.png">
+	<link rel="icon" href="<?= get_template_directory_uri(); ?>/assets/img/icon.png">
 	<?php wp_head(); ?>
 </head>
 
