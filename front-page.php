@@ -64,8 +64,8 @@ get_header();?>
                       if(!empty($image[0])) :
               ?>          
                           <picture>
-                            <source media="(min-width: 1000px)" data-srcset="<?php echo($src_full); ?>">
-                            <source media="(min-width: 640px)" data-srcset="<?php echo($src_large)?>">
+                            <source media="(min-width: 680px)" data-srcset="<?php echo($src_large)?>">
+                            <source media="(min-width: 300px)" data-srcset="<?php echo($src_large)?> 2x, <?php echo($src_medium)?> 1x">
                             <!-- <img class="article__img lazy" data-src="<?php // echo($src_full); ?>" data-srcset="<?php // echo($srcset); ?>" alt="挿絵：<?php // the_title();?>〜<?php // the_field('article_sub_title');?>"> -->
                             <img class="article__img lazy" src="<?php echo($src_minify); ?>" alt="挿絵：<?php the_title();?>〜<?php the_field('article_sub_title');?>">
                           </picture>
