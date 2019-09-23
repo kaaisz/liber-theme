@@ -1,7 +1,11 @@
 @import "variables";
 @import "mixins";
 
-.copyright {
+.site-info {
   margin: 3rem 1rem;
+}
+
+.copyright {
+  font-size: 12px;
   text-align: right;
 }

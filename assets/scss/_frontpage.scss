@@ -60,6 +60,10 @@
     background: $color-cover;
     box-shadow: 0 10px 15px rgba(15, 15, 15, 0.5);
 
+    &:hover {
+      box-shadow: 0 10px 20px rgba(15, 15, 15, 0.85);
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -81,26 +85,27 @@
   }
 
   &__container,
+  &__img,
+  &__title {
+    opacity: 0.9;
+    transition: all .2s linear;
+
+    &:hover {
+      opacity: 1;
+      transition: all .2s linear;
+    }
+  }
+
+  &__container,
   &__img {
     display: block;
     width: 100%;
     height: 100%;
     border-radius: 2px;
-    transition: all .2s linear;
-
-    &:hover {
-      box-shadow: 0 10px 20px #191919;
-      transition: all .2s linear;
-    }
   }
 
   &__img {
     object-fit: cover;
-    opacity: 0.8;
-
-    &:hover {
-      opacity: 1;
-    }
   } 
 
   &__title {
