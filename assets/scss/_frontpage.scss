@@ -72,27 +72,42 @@
       display: block;
       height: 100%;
       border-right: 6px solid $color-black;
-      opacity: 0.2;
       filter: blur(2px);
       z-index: 1;
-      transition: opacity 0.2s linear;
+      opacity: 0.3;
+
+      @media not all and (pointer: coarse) {
+        opacity: 0.2;
+        transition: opacity 0.2s linear;
+      }
     }
 
-    &:hover::after {
-      opacity: 0.3;
-      transition: opacity 0.2s linear;
+    @media not all and (pointer: coarse) {
+      &:hover::after {
+        opacity: 0.3;
+        transition: opacity 0.2s linear;
+      }
     }
   }
 
-  &__container,
-  &__img,
-  &__title {
-    opacity: 0.9;
-    transition: all .2s linear;
-
-    &:hover {
-      opacity: 1;
+  @media not all and (pointer: coarse) {
+    &__container,
+    &__img {
+      opacity: 0.9;
       transition: all .2s linear;
+
+      &:hover {
+        opacity: 1;
+        transition: all .2s linear;
+      }
+    }
+
+    &__title {
+      opacity: 1;
+      
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
