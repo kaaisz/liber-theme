@@ -2,7 +2,10 @@
 @import "mixins";
 
 .site-info {
-  margin: 3rem 1rem;
+  margin: 1rem;
+  @include lg {
+    margin: 3rem 1rem;
+  }
 }
 
 .copyright {
