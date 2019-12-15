@@ -43,9 +43,7 @@ hamburger.addEventListener('click', function (e){
 overlay.addEventListener('click', function(e){
   e.preventDefault();
   hamburger.classList.remove('active');
-  // drawer open
   drawer.classList.remove('open');
-  // enable overlay
   overlay.classList.remove('active');
   body.style.overflowX = 'scroll';
 });
@@ -66,10 +64,7 @@ target.addEventListener('scroll', function() {
 function hideIndicator() {
   // console.log('edgeOfIntro: ', edgeOfIntro, 'scroll: ', target.scrollLeft);
   // console.log('rest of scroll until edge: ', (target.scrollLeft - edgeOfIntro));
-  // when scroll indicator has reached to section class = main
   if (target.scrollLeft <= (contentLength - triggerFlag)) {
-    // hide scroll indicator
-    // console.log('hide indicator');
     scrollIndicator.style.opacity = '0';
   }
 }

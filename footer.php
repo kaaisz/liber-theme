@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="footer site-footer">
 		<div class="site-info">
-			<p class="copyright"><?php echo date(Y);?> &copy; Timelag.ltd All rights reserved.</p>
+			<p class="copyright"><?php echo date(Y);?> &copy; Timelag.ltd All rights reserved. Website powered by <a href="http://kaaisuzuki.com">Kaai Suzuki</a></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page @header.php -->
