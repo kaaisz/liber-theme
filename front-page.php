@@ -71,7 +71,7 @@ get_header();?>
                           </picture>
 
                       <?php else: ?>
-                          <div class="article__img"></div>
+                          <div class="article__img lazy"></div>
               <?php 
                       endif; 
                   endif;
