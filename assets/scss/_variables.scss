@@ -39,15 +39,8 @@ $header-width-xl: 65px;
 // intro width
 @mixin intro-width($width) {
   width: calc(100vw - 50px);
-  @media (min-width: $screen-md-min) {
-    width: calc(100vw - 50px);
-  }
 
   @media (min-width: $screen-lg-min) {
-    width: calc(100vw - 65px);
-  }
-
-  @media (min-width: $screen-xl-min) {
     width: calc(100vw - 65px);
   }
 }
