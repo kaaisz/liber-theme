@@ -76,9 +76,6 @@ a {
 
 .site {
   display: block;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
   width: 100%;
   // width: max-content;
   // width: intrinsic;           /* Safari/WebKit uses a non-standard name */
@@ -348,23 +345,106 @@ a {
     width: 12rem;
     height: 2rem;
     padding: 0 1rem;
-    border: 1px solid white;
+    border: 1px solid $color-type;
     background: transparent;
     box-shadow: none;
     transform: rotate(90deg) translate(50%, 0);
     -webkit-appearance: none;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba($color-type, 0.6);
     }
   }
   
   &-submit {
     height: 2rem;
     padding: 0 1rem;
-    color: white;
-    border: 1px solid white;
+    color: $color-type;
+    border: 1px solid $color-type;
     background: transparent;
     transform: rotate(90deg) translate(360%, 0);
+  }
+}
+
+
+#ez-toc-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: $color-gray;
+  transform: translate(100%, 0);
+  transition: all .3s ease-in-out;
+  max-width: calc(100vw - 60px);
+
+  &.open {
+    transform: translate(0, 0);
+    transition: all .3s ease-in-out;
+  }
+
+  nav {
+    padding-left: 10px;
+    position: relative;
+    overflow-x: auto;
+    height: 100%;
+  }
+
+  .ez-toc {
+    &-title-toggle {
+      position: absolute;
+      bottom: 60px;
+      right: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      width: auto;
+      height: 80px;
+      padding: 16px 0;
+      background: $color-gray;
+      color: $color-type;
+      font-size: 16px;
+      line-height: 1;
+      opacity: 0;
+      transition: all .3s ease;
+      z-index: 1;
+      cursor: pointer;
+  
+      &.show {
+        opacity: 1;
+      }
+    }
+  
+    &-title-container {
+      width: $header-width-sm;
+      // height: 100%;
+      @include common-height;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      @include lg {
+        width: $header-width-lg;
+      }
+  
+      p {
+        width: $header-width-sm;
+        line-height: $header-width-sm;
+        text-indent: 0;
+
+        @include lg {
+          width: $header-width-lg;
+          line-height: $header-width-lg
+        }
+      }
+    }
+  
+    &-list {
+      @include common-height;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 }
