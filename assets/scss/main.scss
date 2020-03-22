@@ -253,6 +253,7 @@ a {
   -webkit-transition: opacity .3s linear;
   transition: opacity .3s linear;
   white-space: nowrap;
+  z-index: 1;
 
   @include lg {
     right: 48%;
@@ -395,7 +396,7 @@ a {
   .ez-toc {
     &-title-toggle {
       position: absolute;
-      bottom: 48px;
+      bottom: 20px;
       right: 100%;
       display: flex;
       align-items: center;
@@ -412,6 +413,14 @@ a {
       transition: all .3s ease;
       z-index: 1;
       cursor: pointer;
+
+      @include md {
+        bottom: 32px;
+      }
+
+      @include lg {
+        bottom: 48px;
+      }
   
       &.show {
         opacity: 1;
