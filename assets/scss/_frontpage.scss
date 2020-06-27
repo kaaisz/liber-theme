@@ -47,6 +47,17 @@
       font-size: 18px;
     }
   }
+
+  &__content a,
+  &__link {
+    transition: all .2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, .8);
+      color: $color-bg;
+      // transition: all .2s ease;
+    }
+  }
 }
 
 .article {

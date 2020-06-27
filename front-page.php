@@ -24,6 +24,20 @@ get_header();?>
           <?php endif; ?>
           <!-- top_description is required -->
           <p class="intro__content"><?php the_field('top_description', 55);?></p>
+          <?php $link = get_field('top_link', 55);
+                if( $link ): 
+                  $link_url = $link['url'];
+                  $link_title = $link['title']; ?>
+            <a class="intro__link" href="<?php echo esc_url( $link_url ); ?>">
+              <?php 
+                if(!empty($link_title)) {
+                  echo esc_url( $link_title );
+                } else {
+                  echo esc_url( $link_url );
+                }
+              ?>
+            </a>
+          <?php endif; ?>
         </div>
       </div>
     </section>
