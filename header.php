@@ -21,8 +21,8 @@
 	<?php else: ?>
 		<meta property="og:locale" content="ja_JP" />
 		<meta property="og:site_name" content="リベル" />
-		<meta property="og:type"          content="website" />
-		<meta property="og:title"         content="リベル" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="リベル" />
 	<?php endif; ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
 	<link rel="profile" href="https://gmpg.org/xfn/11">

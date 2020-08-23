@@ -78,20 +78,22 @@
 			}
 		}
 
-		tocTab.querySelectorAll('nav ul a').forEach(el => {
-			el.addEventListener('click', toggleContents);
-		});
+		if(tocTab) {
+			tocTab.querySelectorAll('nav ul a').forEach(el => {
+				el.addEventListener('click', toggleContents);
+			});	
 
-		toggler.innerHTML = '目次';
-		toggler.addEventListener('click', toggleContents);
+			toggler.innerHTML = '目次';
+			toggler.addEventListener('click', toggleContents);
 
-		function toggleContents() {
-			if(tocTab.classList.contains('open')) {
-				tocTab.classList.remove('open')
-				toggler.innerHTML = '目次';
-			} else {
-				tocTab.classList.add('open')
-				toggler.innerHTML = '閉じる';
+			function toggleContents() {
+				if(tocTab.classList.contains('open')) {
+					tocTab.classList.remove('open')
+					toggler.innerHTML = '目次';
+				} else {
+					tocTab.classList.add('open')
+					toggler.innerHTML = '閉じる';
+				}
 			}
 		}
 	}
