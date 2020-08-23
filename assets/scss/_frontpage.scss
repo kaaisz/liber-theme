@@ -63,6 +63,14 @@
   max-height: 480px;
   margin: auto 8rem;
   height: 380px;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: all 1.25s ease;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &__container {
     position: relative;

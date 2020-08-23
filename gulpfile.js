@@ -28,15 +28,15 @@ function compileSass() {
     .pipe(browserSync.stream());
 }
 
-// function watchFiles() {
-//   browserSync.init({
-//     server: {
-//       baseDir: './'
-//     }
-//   });
-//   gulp.watch(path.join(assetsPath, 'scss/*.scss'), compileSass);
-//   gulp.watch('./*.html').on('change', browserSync.reload);
-//   gulp.watch(path.join(assetsPath, 'js/*.js')).on('change', browserSync.reload);
-// }
+function watchFiles() {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
+  gulp.watch(path.join(assetsPath, 'scss/*.scss'), compileSass);
+  gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.watch(path.join(assetsPath, 'js/*.js')).on('change', browserSync.reload);
+}
 
 exports.default = series(compileSass);

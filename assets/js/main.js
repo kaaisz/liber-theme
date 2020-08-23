@@ -16,7 +16,29 @@
 
 	controlNav(); // hamburger menu
 	controlScroll(); // scroll action
-	
+
+	if(document.querySelector('.article')) {
+		const articles = document.querySelectorAll('.article')
+		const appearOptions = {
+			root: null,
+			rootMargin: "50% 0px",
+			threshold: 0
+		}
+		const appearScroll = new IntersectionObserver((entries, appearScroll) => {
+			console.log(entries, appearScroll);
+			entries.forEach(entry => {
+				// observer.observe(entry);
+				if(entry.isIntersecting) {
+					entry.target.classList.add('active');
+					appearScroll.unobserve(entry.target);
+				}
+			}, appearOptions)
+		});
+		articles.forEach(article => {
+			appearScroll.observe(article);
+		});
+	}
+
 	function controlNav() {
 		const body = document.querySelector('body');
 		const hamburger = document.querySelector('.nav__toggle');
@@ -101,13 +123,13 @@
 	function scrollHorizontally(e) {
 		e = window.event || e;
 		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-		var scrollSpeed = 6.25; // Janky jank <<<<<<<<<<<<<<
+		var scrollSpeed = 4.75; // Janky jank <<<<<<<<<<<<<<
 		document.querySelector('.site').scrollLeft -= (delta * scrollSpeed);
 		document.querySelector('.site').scrollLeft -= (delta * scrollSpeed);
 		e.preventDefault();
-	  }
-	  
-	  if (document.querySelector('.site')) {
+	}
+		
+	if (document.querySelector('.site')) {
 		const scrollElement = document.querySelector('.site')
 		// IE9, Chrome, Safari, Opera
 		scrollElement.addEventListener("mousewheel", function(e) {
@@ -119,11 +141,11 @@
 			e.preventDefault();
 			scrollHorizontally();
 		}, {passive: false});
-	  } else {
+	} else {
 		// IE 6/7/8
 		scrollElement.attachEvent("onmousewheel", function(e) {
 			e.preventDefault();
 			scrollHorizontally();
 		}, {passive: false});
-	  }
+	}
 })();
