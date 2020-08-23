@@ -97,4 +97,33 @@
 			}
 		}
 	}
+
+	function scrollHorizontally(e) {
+		e = window.event || e;
+		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+		var scrollSpeed = 6.25; // Janky jank <<<<<<<<<<<<<<
+		document.querySelector('.site').scrollLeft -= (delta * scrollSpeed);
+		document.querySelector('.site').scrollLeft -= (delta * scrollSpeed);
+		e.preventDefault();
+	  }
+	  
+	  if (document.querySelector('.site')) {
+		const scrollElement = document.querySelector('.site')
+		// IE9, Chrome, Safari, Opera
+		scrollElement.addEventListener("mousewheel", function(e) {
+			e.preventDefault();
+			scrollHorizontally();
+		}, {passive: false});
+		// Firefox
+		scrollElement.addEventListener("DOMMouseScroll", function(e) {
+			e.preventDefault();
+			scrollHorizontally();
+		}, {passive: false});
+	  } else {
+		// IE 6/7/8
+		scrollElement.attachEvent("onmousewheel", function(e) {
+			e.preventDefault();
+			scrollHorizontally();
+		}, {passive: false});
+	  }
 })();
